@@ -1,13 +1,9 @@
 <script>
 	import '../app.css';
+	import Navbar from '../lib/components/Navbar.svelte';
 </script>
 
-<nav class="p-5 grid justify-items-end">
-	<div>
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-	</div>
-</nav>
+<Navbar></Navbar>
 
 <main class="p-5">
 	<slot />

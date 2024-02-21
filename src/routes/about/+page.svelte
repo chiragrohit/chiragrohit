@@ -1,1 +1,1 @@
-<h1 class="text-3xl font-bold underlin">About</h1>
+<h1 class="text-3xl font-bold">About</h1>
