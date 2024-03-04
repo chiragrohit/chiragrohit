@@ -25,7 +25,7 @@
 <div class="p-4 flex justify-center">
 	<h1 class="text-3xl font-bold">About</h1>
 </div>
-<main class="flex flex-col items-center">
+<div class="p-4 flex flex-col">
 	<div>
 		<button on:click={fetchData} class="btn-primary">Click to get msg</button>
 		{#if message}
@@ -42,4 +42,4 @@
 			<p>No Message</p>
 		{/if}
 	</div>
-</main>
+</div>

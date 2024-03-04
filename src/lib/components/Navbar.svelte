@@ -1,15 +1,23 @@
 <script>
 	let isOpen = false;
+	const navbarItems = {
+		Home: '/',
+		Projects: '/projects',
+		Components: '/components',
+		'Tech Stack': '/techstack',
+		About: '/about',
+		Contact: '/contact'
+	};
 </script>
 
-<nav class="bg-black text-white">
+<nav class="navbar">
 	<div class="mx-auto px-4">
 		<div class="flex justify-between">
 			<div class="flex justify-between items-center w-full">
 				<!-- Left side: logo and primary nav -->
 				<div class="flex space-x-4">
 					<!-- logo -->
-					<div>
+					<div class="hover:text-gray-500">
 						<a href="/" class="flex items-center py-5 px-3">
 							<span class="text-xl font-bold">Chirag Rohit</span>
 						</a>
@@ -17,11 +25,9 @@
 
 					<!-- primary nav -->
 					<div class="hidden md:flex items-center space-x-1">
-						<a href="/" class="py-2 px-3 hover:bg-white hover:text-black">Home</a>
-						<a href="/projects" class="py-2 px-3 hover:bg-white hover:text-black">Projects</a>
-						<a href="/components" class="py-2 px-3 hover:bg-white hover:text-black">Components</a>
-						<a href="/about" class="py-2 px-3 hover:bg-white hover:text-black">About</a>
-						<a href="/contact" class="py-2 px-3 hover:bg-white hover:text-black">Contact</a>
+						{#each Object.entries(navbarItems) as [label, route]}
+							<a href={route} class="navbar-list">{label}</a>
+						{/each}
 					</div>
 				</div>
 			</div>
@@ -49,12 +55,8 @@
 
 	<!-- mobile menu -->
 	<div class={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-		<a href="/" class="block py-2 px-4 text-sm hover:bg-white hover:text-black">Home</a>
-		<a href="/projects" class="block py-2 px-4 text-sm hover:bg-white hover:text-black">Projects</a>
-		<a href="/components" class="block py-2 px-4 text-sm hover:bg-white hover:text-black"
-			>Components</a
-		>
-		<a href="/about" class="block py-2 px-4 text-sm hover:bg-white hover:text-black">About</a>
-		<a href="/contact" class="block py-2 px-4 text-sm hover:bg-white hover:text-black">Contact</a>
+		{#each Object.entries(navbarItems) as [label, route]}
+			<a href={route} class="block navbar-mobile">{label}</a>
+		{/each}
 	</div>
 </nav>
