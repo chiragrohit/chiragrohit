@@ -6,7 +6,8 @@
 		Components: '/components',
 		'Tech Stack': '/techstack',
 		About: '/about',
-		Contact: '/contact'
+		Contact: '/contact',
+		Test: '/test'
 	};
 </script>
 
