@@ -1,5 +1,7 @@
 <script>
 	let isOpen = false;
+	import { page } from '$app/stores';
+
 	const navbarItems = {
 		Home: '/',
 		Projects: '/projects',
@@ -11,6 +13,7 @@
 	};
 </script>
 
+{JSON.stringify($page)}
 <nav class="navbar">
 	<div class="mx-auto px-4">
 		<div class="flex justify-between">
