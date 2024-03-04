@@ -19,6 +19,7 @@
 					<div class="hidden md:flex items-center space-x-1">
 						<a href="/" class="py-2 px-3 hover:bg-white hover:text-black">Home</a>
 						<a href="/projects" class="py-2 px-3 hover:bg-white hover:text-black">Projects</a>
+						<a href="/components" class="py-2 px-3 hover:bg-white hover:text-black">Components</a>
 						<a href="/about" class="py-2 px-3 hover:bg-white hover:text-black">About</a>
 						<a href="/contact" class="py-2 px-3 hover:bg-white hover:text-black">Contact</a>
 					</div>
@@ -48,9 +49,12 @@
 
 	<!-- mobile menu -->
 	<div class={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-		<a href="/" class="block py-2 px-4 text-sm hover:bg-gray-700">Home</a>
-		<a href="/projects" class="block py-2 px-4 text-sm hover:bg-gray-700">Projects</a>
-		<a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-700">About</a>
-		<a href="/contact" class="block py-2 px-4 text-sm hover:bg-gray-700">Contact</a>
+		<a href="/" class="block py-2 px-4 text-sm hover:bg-white hover:text-black">Home</a>
+		<a href="/projects" class="block py-2 px-4 text-sm hover:bg-white hover:text-black">Projects</a>
+		<a href="/components" class="block py-2 px-4 text-sm hover:bg-white hover:text-black"
+			>Components</a
+		>
+		<a href="/about" class="block py-2 px-4 text-sm hover:bg-white hover:text-black">About</a>
+		<a href="/contact" class="block py-2 px-4 text-sm hover:bg-white hover:text-black">Contact</a>
 	</div>
 </nav>
