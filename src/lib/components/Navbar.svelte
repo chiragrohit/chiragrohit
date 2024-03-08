@@ -40,7 +40,7 @@
 
 			<!-- mobile button goes here -->
 			<div class="md:hidden flex items-center">
-				<button class="mobile-menu-button" on:click={() => (isOpen = !isOpen)}>
+				<button class="pr-4" on:click={() => (isOpen = !isOpen)}>
 					<svg
 						class="w-6 h-6"
 						fill="none"
