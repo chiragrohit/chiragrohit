@@ -2,6 +2,7 @@
 	let message = '';
 	let user = '';
 	let allUsers = '';
+	let modalRes = '';
 
 	const fetchData = async () => {
 		try {
@@ -28,6 +29,17 @@
 			allUsers = await response.json();
 		} catch (error) {
 			console.error('Error fetching all users:', error);
+		}
+	};
+
+	const fetchDataFromModal = async () => {
+		try {
+			const response = await fetch('/api/hello');
+			const data = await response.json();
+			console.log('data from /test/+page.svelte: ', data);
+			modalRes = data.message; // Assuming the response contains a "message" field
+		} catch (error) {
+			console.error('Error fetching data:', error);
 		}
 	};
 </script>
@@ -65,6 +77,14 @@
 					</div>
 				{/each}
 			</div>
+		{:else}
+			<p>No Message</p>
+		{/if}
+	</div>
+	<div>
+		<button on:click={fetchDataFromModal} class="btn-primary">Protected users from Modal</button>
+		{#if modalRes}
+			<p>{modalRes}</p>
 		{:else}
 			<p>No Message</p>
 		{/if}
