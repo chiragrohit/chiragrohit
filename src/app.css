@@ -2,9 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    overflow-y: scroll;
+  }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #10B981; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #064E3B; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #064E3B; 
+  }
+
 @layer components{
+    .page-header{
+        @apply p-2 text-3xl font-semibold;
+    }
+
+    /* BUTTON ##################################### */
     .btn-primary{
-        @apply  bg-white border-2 border-black hover:bg-black hover:text-white hover:border-2 hover:border-black px-6 py-2 ;
+        @apply  bg-white border-2 border-emerald-800 hover:bg-emerald-700 hover:text-white hover:border-2 hover:border-black px-6 py-2 ;
         transition-duration: 300ms
     }
 
@@ -33,35 +62,24 @@
         transition-duration: 300ms;
     }
     
-
-    .navbar{
-        @apply text-black shadow-lg;
-    }
-
-   
-    .navbar-list{
-        @apply py-2 px-3 hover:bg-black hover:text-white
-    }
-   
-
-    .navbar-mobile{
-        @apply py-2 px-4 text-sm hover:bg-black hover:text-white
-    }
+    /* CARD ##################################### */
 
     .card{
-        @apply bg-white shadow-lg p-4 flex flex-col space-y-4 md:max-w-[33%] overflow-auto;
+        @apply bg-white shadow-lg p-4 flex flex-col space-y-4 md:max-w-[50%] overflow-auto;
     }
-
     .card-title{
         @apply text-xl font-bold;
     }
-
     .card-text{
         @apply text-gray-500;
     }
+
+
+    /* INPUT ##################################### */
     input{
         @apply border-2 border-gray-300 shadow-lg w-full p-2;
     }
+
     textarea{
         @apply border-2 border-gray-300 shadow-lg w-full p-2 appearance-none;
     }

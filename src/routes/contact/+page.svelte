@@ -1,9 +1,9 @@
 <div>
-	<h1 class="text-3xl font-bold">Contact</h1>
+	<h1 class="page-header">Contact</h1>
 </div>
 
 <div class="flex flex-col items-center">
-	<form class="w-full max-w-md">
+	<form class="w-full max-w-lg">
 		<div class="mb-4">
 			<label for="name" class="block text-gray-700 text-lg font-bold mb-2">Name</label>
 			<input type="text" id="name" class="form-input" />

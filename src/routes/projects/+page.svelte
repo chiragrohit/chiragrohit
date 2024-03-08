@@ -1,3 +1,3 @@
 <div>
-	<h1 class="text-3xl font-bold">Project</h1>
+	<h1 class="page-header">Project</h1>
 </div>

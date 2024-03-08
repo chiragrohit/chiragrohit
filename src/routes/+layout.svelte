@@ -3,8 +3,7 @@
 	import Navbar from '../lib/components/Navbar.svelte';
 </script>
 
-<Navbar></Navbar>
-
-<div class="p-8">
+<Navbar />
+<div class="bg-white overflow-auto max-w-screen-xl mx-auto">
 	<slot />
 </div>

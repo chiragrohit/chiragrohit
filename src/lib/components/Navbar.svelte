@@ -13,15 +13,17 @@
 	};
 </script>
 
-{JSON.stringify($page)}
-<nav class="navbar">
-	<div class="mx-auto px-4">
+<!-- {JSON.stringify($page)} -->
+<nav
+	class="text-white shadow-lg sticky top-0 z-50 bg-gradient-to-r from-emerald-900 to-emerald-500"
+>
+	<div class="mx-auto max-w-screen-xl">
 		<div class="flex justify-between">
 			<div class="flex justify-between items-center w-full">
 				<!-- Left side: logo and primary nav -->
 				<div class="flex space-x-4">
 					<!-- logo -->
-					<div class="hover:text-gray-500">
+					<div class="hover:text-emerald-300">
 						<a href="/" class="flex items-center py-5 px-3">
 							<span class="text-xl font-bold">Chirag Rohit</span>
 						</a>
@@ -30,7 +32,7 @@
 					<!-- primary nav -->
 					<div class="hidden md:flex items-center space-x-1">
 						{#each Object.entries(navbarItems) as [label, route]}
-							<a href={route} class="navbar-list">{label}</a>
+							<a href={route} class="py-2 px-3 hover:bg-emerald-800 hover:text-white">{label}</a>
 						{/each}
 					</div>
 				</div>
@@ -60,7 +62,9 @@
 	<!-- mobile menu -->
 	<div class={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
 		{#each Object.entries(navbarItems) as [label, route]}
-			<a href={route} class="block navbar-mobile">{label}</a>
+			<a href={route} class="block py-2 px-4 text-sm hover:bg-emerald-800 hover:text-white"
+				>{label}</a
+			>
 		{/each}
 	</div>
 </nav>
