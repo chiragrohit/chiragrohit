@@ -1,1 +1,1 @@
-<h1 class="page-header">Editor</h1>
+<h1 class="text-3xl">Editor</h1>

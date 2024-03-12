@@ -45,7 +45,7 @@
 </script>
 
 <div>
-	<h1 class="page-header">Test</h1>
+	<h1 class="text-3xl">Test</h1>
 </div>
 <div class="p-4 flex flex-col">
 	<div>

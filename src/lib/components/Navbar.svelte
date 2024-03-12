@@ -1,7 +1,5 @@
 <script>
 	let isOpen = false;
-	import { page } from '$app/stores';
-	import { theme } from '$lib/stores';
 
 	const navbarItems = {
 		Home: '/',
@@ -12,22 +10,14 @@
 		Contact: '/contact',
 		Test: '/test'
 	};
-
-	function changeTheme() {
-		$theme = !$theme;
-	}
 </script>
 
-<!-- {JSON.stringify($page)} -->
-Theme: {$theme}
-<nav
-	class="text-white shadow-lg sticky top-0 z-50 bg-gradient-to-r from-emerald-900 to-emerald-500"
->
+<nav class=" text-[18px] bg-yellow-500 sticky top-0 z-50 p-4">
 	<div class="mx-auto max-w-screen-xl">
 		<div class="flex justify-between">
 			<div class="flex justify-between items-center w-full">
 				<!-- logo -->
-				<div class="hover:text-emerald-300">
+				<div>
 					<a href="/" class="flex items-center py-5 px-3">
 						<span class="text-xl font-bold">Chirag Rohit</span>
 					</a>
@@ -36,9 +26,8 @@ Theme: {$theme}
 					<!-- primary nav -->
 					<div class="hidden md:flex items-center space-x-1">
 						{#each Object.entries(navbarItems) as [label, route]}
-							<a href={route} class="py-2 px-3 hover:bg-emerald-800 hover:text-white">{label}</a>
+							<a href={route} class="py-2 px-3 hover:bg-yellow-600">{label}</a>
 						{/each}
-						<button on:click={changeTheme} class="btn-primary">Theme</button>
 					</div>
 				</div>
 			</div>
@@ -67,9 +56,7 @@ Theme: {$theme}
 	<!-- mobile menu -->
 	<div class={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
 		{#each Object.entries(navbarItems) as [label, route]}
-			<a href={route} class="block py-2 px-4 text-sm hover:bg-emerald-800 hover:text-white"
-				>{label}</a
-			>
+			<a href={route} class="block py-2 px-4 hover:bg-yellow-600 rounded-sm">{label}</a>
 		{/each}
 	</div>
 </nav>

@@ -24,10 +24,6 @@ web_app.add_middleware(
 async def home():
     return {"message": "Hello World from modal.com using +page.server.js"}
 
-# @web_app.get("/users")
-# async def get_user():
-#     return {"message": "Hello from /users"}
-
 @web_app.get("/users")
 async def get_user(token: HTTPAuthorizationCredentials = Depends(auth_scheme)):
     
@@ -39,9 +35,6 @@ async def get_user(token: HTTPAuthorizationCredentials = Depends(auth_scheme)):
         )
     
     return {"message": "Protected user's list"}
-
-
-
 
 
 @stub.function(secrets=[Secret.from_name("chiragrohit-secret")])

@@ -1,3 +1,1 @@
-<div>
-	<h1 class="page-header">Tech Stack</h1>
-</div>
+<h1 class="text-3xl">Tech Stack</h1>
