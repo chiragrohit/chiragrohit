@@ -6,10 +6,10 @@
 	export let data;
 </script>
 
-<Navbar />
+<Navbar navbarItems={data.navbarItems} />
 {#key data.url}
 	<div
-		class="overflow-auto max-w-screen-xl mx-auto"
+		class="overflow-auto p-4 md:p-0"
 		in:fly={{ y: 200, duration: 300, delay: 300 }}
 		out:fly={{ y: -200, duration: 300 }}
 	>

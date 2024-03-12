@@ -16,7 +16,7 @@
 	.error-code {
 		font-size: 6rem;
 		font-weight: bold;
-		color: #ff5555; /* Custom color for error code */
+		color: black; /* Custom color for error code */
 	}
 
 	.error-message {

@@ -1,24 +1,16 @@
 <script>
 	let isOpen = false;
 
-	const navbarItems = {
-		Home: '/',
-		Projects: '/projects',
-		Components: '/components',
-		'Tech Stack': '/techstack',
-		About: '/about',
-		Contact: '/contact',
-		Test: '/test'
-	};
+	export let navbarItems;
 </script>
 
-<nav class=" text-[18px] bg-yellow-500 sticky top-0 z-50 p-4">
+<nav class="pt-8 pb-8 text-[18px] font-semibold">
 	<div class="mx-auto max-w-screen-xl">
 		<div class="flex justify-between">
 			<div class="flex justify-between items-center w-full">
 				<!-- logo -->
-				<div>
-					<a href="/" class="flex items-center py-5 px-3">
+				<div class="pl-4 md:pl-0">
+					<a href="/" class="flex items-center">
 						<span class="text-xl font-bold">Chirag Rohit</span>
 					</a>
 				</div>
@@ -26,7 +18,7 @@
 					<!-- primary nav -->
 					<div class="hidden md:flex items-center space-x-1">
 						{#each Object.entries(navbarItems) as [label, route]}
-							<a href={route} class="py-2 px-3 hover:bg-yellow-600">{label}</a>
+							<a href={route} class="py-2 px-3 hover:bg-sky300">{label}</a>
 						{/each}
 					</div>
 				</div>
@@ -56,7 +48,7 @@
 	<!-- mobile menu -->
 	<div class={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
 		{#each Object.entries(navbarItems) as [label, route]}
-			<a href={route} class="block py-2 px-4 hover:bg-yellow-600 rounded-sm">{label}</a>
+			<a href={route} class="block py-2 px-4 hover:bg-sky300 rounded-sm">{label}</a>
 		{/each}
 	</div>
 </nav>
