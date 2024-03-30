@@ -16,9 +16,9 @@
 				</div>
 				<div class="flex space-x-4">
 					<!-- primary nav -->
-					<div class="hidden md:flex items-center space-x-1">
+					<div class="hidden md:flex items-center">
 						{#each Object.entries(navbarItems) as [label, route]}
-							<a href={route} class="py-2 px-3 hover:bg-sky300">{label}</a>
+							<a href={route} class="py-2 px-3 hover:bg-yellow-300">{label}</a>
 						{/each}
 					</div>
 				</div>
@@ -46,9 +46,9 @@
 	</div>
 
 	<!-- mobile menu -->
-	<div class={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
+	<div class={`md:hidden pt-4 ${isOpen ? 'block' : 'hidden'}`}>
 		{#each Object.entries(navbarItems) as [label, route]}
-			<a href={route} class="block py-2 px-4 hover:bg-sky300 rounded-sm">{label}</a>
+			<a href={route} class="block py-1 px-4 hover:bg-yellow-300 rounded-sm">{label}</a>
 		{/each}
 	</div>
 </nav>
