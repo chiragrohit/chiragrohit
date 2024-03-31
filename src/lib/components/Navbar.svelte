@@ -4,7 +4,7 @@
 	export let navbarItems;
 </script>
 
-<nav class="pt-8 pb-8 text-[18px] font-semibold">
+<nav class="p-8 text-[18px] font-semibold">
 	<div class="mx-auto max-w-screen-xl">
 		<div class="flex justify-between">
 			<div class="flex justify-between items-center w-full">
@@ -46,7 +46,7 @@
 	</div>
 
 	<!-- mobile menu -->
-	<div class={`md:hidden pt-4 ${isOpen ? 'block' : 'hidden'}`}>
+	<div class={`md:hidden bg-yellow-200 pt-4 ${isOpen ? 'block' : 'hidden'}`}>
 		{#each Object.entries(navbarItems) as [label, route]}
 			<a href={route} class="block py-1 px-4 hover:bg-yellow-300 rounded-sm">{label}</a>
 		{/each}

@@ -31,33 +31,5 @@
 				<button class="btn-primary">Buy Now</button>
 			</div>
 		</div>
-		<div class="card">
-			<div class="card-body">
-				<h1 class="card-title">Card Title</h1>
-				<p class="card-text">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit, eveniet quam quod,
-					laboriosam dolores quas repellat dolor cum excepturi exercitationem, nemo labore! Velit
-					doloribus excepturi necessitatibus reprehenderit nihil eos? Lorem ipsum dolor sit amet
-					consectetur adipisicing elit. Qui veniam consequuntur commodi, deleniti animi quibusdam,
-					dolore numquam placeat officia excepturi, cupiditate repudiandae at recusandae! Qui iusto
-					cumque est adipisci incidunt?
-				</p>
-				<button class="btn-primary">Buy Now</button>
-			</div>
-		</div>
-		<div class="card">
-			<div class="card-body">
-				<h1 class="card-title">Card Title</h1>
-				<p class="card-text">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit, eveniet quam quod,
-					laboriosam dolores quas repellat dolor cum excepturi exercitationem, nemo labore! Velit
-					doloribus excepturi necessitatibus reprehenderit nihil eos? Lorem ipsum dolor sit amet
-					consectetur adipisicing elit. Qui veniam consequuntur commodi, deleniti animi quibusdam,
-					dolore numquam placeat officia excepturi, cupiditate repudiandae at recusandae! Qui iusto
-					cumque est adipisci incidunt?
-				</p>
-				<button class="btn-primary">Buy Now</button>
-			</div>
-		</div>
-	</div>
-</diV>
+	</div></diV
+>
