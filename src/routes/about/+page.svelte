@@ -2,9 +2,9 @@
 	import { Github, Facebook, Twitter, Mail, Instagram } from 'lucide-svelte';
 </script>
 
-<div class="flex flex-col md:flex-row bg-yellow-200">
+<div class="flex flex-col md:flex-row bg-yellow-200 p-4">
 	<!-- Aside for Photo and Socials -->
-	<aside class="flex flex-col items-center p-4 md:w-1/4">
+	<aside class="flex flex-col items-center md:w-1/4">
 		<img src="profile.png" class="w-[30%] md:w-[50%] rounded-full mb-4" alt="Profile" />
 		<h1 class="text-3xl font-semibold">Chirag Rohit</h1>
 		<div class="flex mt-2">
@@ -48,7 +48,7 @@
 		</div>
 	</aside>
 
-	<div class="flex flex-col p-8 md:w-3/4">
+	<div class="flex flex-col pl-4 md:w-3/4">
 		<h1 class="text-3xl">Hello<span>👋</span></h1>
 	</div>
 </div>
