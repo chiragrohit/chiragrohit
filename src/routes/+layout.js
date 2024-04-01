@@ -3,7 +3,6 @@ const navbarItems = {
   Projects: "/projects",
   Components: "/components",
   About: "/about",
-  Test: "/test",
 };
 
 export function load({ url }) {
