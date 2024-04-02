@@ -1,5 +1,5 @@
 <script>
-	import { Github, Facebook, Twitter, Mail, Instagram } from 'lucide-svelte';
+	import { Github, Facebook, Twitter, Mail, Instagram, Linkedin } from 'lucide-svelte';
 </script>
 
 <div class="flex flex-col md:flex-row bg-yellow-200 p-4">
@@ -11,6 +11,7 @@
 			<div class="flex flex-col space-y-2">
 				<a
 					href="https://github.com/chiragrohit"
+					target="_blank"
 					class="flex space-x-2 p-2 hover:bg-yellow-500 hover:text-white"
 				>
 					<Github />
@@ -18,23 +19,34 @@
 				</a>
 				<a
 					href="https://twitter.com/iamchiragrohit"
+					target="_blank"
 					class="flex space-x-2 p-2 hover:bg-yellow-500 hover:text-white"
 				>
 					<Twitter />
 					<span>@iamchiragrohit</span>
 				</a>
 				<a
-					href="https://facebook.com/iamchiragrohit"
+					href="https://linkedin.com/in/iamchiragrohit"
+					target="_blank"
 					class="flex space-x-2 p-2 hover:bg-yellow-500 hover:text-white"
 				>
-					<Facebook />
+					<Linkedin />
 					<span>@iamchiragrohit</span>
 				</a>
 				<a
 					href="https://instagram.com/iamchiragrohit"
+					target="_blank"
 					class="flex space-x-2 p-2 hover:bg-yellow-500 hover:text-white"
 				>
 					<Instagram />
+					<span>@iamchiragrohit</span>
+				</a>
+				<a
+					href="https://facebook.com/iamchiragrohit"
+					target="_blank"
+					class="flex space-x-2 p-2 hover:bg-yellow-500 hover:text-white"
+				>
+					<Facebook />
 					<span>@iamchiragrohit</span>
 				</a>
 				<a
