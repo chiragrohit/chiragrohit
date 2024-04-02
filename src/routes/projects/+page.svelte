@@ -5,10 +5,10 @@
 <div class="flex flex-wrap justify-around">
 	<div class="card">
 		<div class="card-body">
-			<p class="card-title">Project 1</p>
-			<p class="card-text">A markdown-based editor</p>
+			<p class="card-title">Editor</p>
+			<p class="card-text">A markdown-based editor using codemirror</p>
 
-			<a href="/projects/Project 1" class="btn-primary">Read More</a>
+			<a href="/editor" class="btn-primary">View</a>
 		</div>
 	</div>
 
