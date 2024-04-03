@@ -18,7 +18,9 @@
 					<!-- primary nav -->
 					<div class="hidden md:flex items-center">
 						{#each Object.entries(navbarItems) as [label, route]}
-							<a href={route} class="py-2 px-3 hover:bg-yellow-300">{label}</a>
+							<a href={route} class="py-2 px-3 hover:bg-yellow-200 hover:text-black rounded"
+								>{label}</a
+							>
 						{/each}
 					</div>
 				</div>
@@ -46,9 +48,11 @@
 	</div>
 
 	<!-- mobile menu -->
-	<div class={`md:hidden bg-yellow-200 pt-4 ${isOpen ? 'block' : 'hidden'}`}>
+	<div class={`md:hidden bg-yellow-100 pt-4 ${isOpen ? 'block' : 'hidden'}`}>
 		{#each Object.entries(navbarItems) as [label, route]}
-			<a href={route} class="block py-1 px-4 hover:bg-yellow-300 rounded-sm">{label}</a>
+			<a href={route} class="block py-1 px-4 hover:bg-yellow-200 hover:text-black rounded-sm"
+				>{label}</a
+			>
 		{/each}
 	</div>
 </nav>

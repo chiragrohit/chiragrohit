@@ -14,11 +14,11 @@
     }
 
     ::-webkit-scrollbar-thumb {
-        background: #af8e0c;
+        background: #c1aa50;
     }
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        background: #967a07; 
+        background: #6d6306; 
     }
 
 
@@ -26,14 +26,14 @@
 
 
     .btn-primary{
-        @apply bg-yellow-400 text-black px-6 py-2 border-2 border-yellow-400 shadow-md hover:bg-yellow-200 hover:text-black transition-all duration-300 ease-in-out;
+        @apply bg-yellow-400 text-black px-6 py-2 border-2 border-yellow-400 rounded-md shadow-md hover:bg-yellow-200 hover:text-black transition-all duration-300 ease-in-out;
     }
 
 
 
     
     .card{
-        @apply bg-yellow-200 p-4 mt-4 md:mt-0 rounded-lg shadow-md md:max-w-[30%];
+        @apply bg-yellow-300 p-4 mt-4 md:mt-0 rounded-lg shadow-md md:max-w-[30%];
     }
 
     .card-body{

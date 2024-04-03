@@ -9,7 +9,7 @@
 <Navbar navbarItems={data.navbarItems} />
 {#key data.url}
 	<div
-		class="overflow-auto p-8"
+		class="overflow-auto"
 		in:fly={{ y: 200, duration: 300, delay: 300 }}
 		out:fly={{ y: -200, duration: 300 }}
 	>

@@ -1,34 +1,50 @@
 <script>
-	import CodeMirror from 'svelte-codemirror-editor';
-	import { markdown } from '@codemirror/lang-markdown';
-	import SvelteMarkdown from 'svelte-markdown';
-
-	let editMode = false;
-	let content = '# ABC\n> Wow';
-
-	function toggleEditMode() {
-		editMode = !editMode;
-	}
+	import LeftSidebar from './LeftSidebar.svelte';
+	import MainContent from './MainContent.svelte';
+	import RightSidebar from './RightSidebar.svelte';
+	import { slide } from 'svelte/transition';
+	import { sidebar } from '$lib/stores';
 </script>
 
-<button
-	class="{editMode
-		? 'bg-emerald-500 hover:bg-emerald-400'
-		: 'bg-yellow-500 hover:bg-yellow-400'} text-white min-w-[100px] px-2 py-1 rounded-sm"
-	on:click={toggleEditMode}
->
-	{#if editMode}
-		Save
-	{:else}
-		Edit
-	{/if}
-</button>
-{#if editMode}
-	<CodeMirror bind:value={content} lang={markdown()} class="p-2 text-lg" />
-{:else if content !== null}
-	<div class="prose p-4">
-		<SvelteMarkdown source={content} />
+<div class="flex justify-between text-white pl-2 pr-2 pb-2">
+	<button
+		on:click={sidebar.toggleLeft}
+		class=" px-4 rounded-sm bg-yellow-400 text-yellow-950 hover:bg-yellow-300">Left</button
+	>
+	<button
+		on:click={sidebar.toggleRight}
+		class=" px-4 rounded-sm bg-yellow-400 text-yellow-950 hover:bg-yellow-300">Right</button
+	>
+</div>
+
+<div class="flex h-screen overflow-hidden">
+	<div
+		in:slide={{ from: -300 }}
+		class="w-full sm:flex-none sm:w-64 bg-yellow-100"
+		style:width={$sidebar.leftOpen ? '300px' : '0px'}
+	>
+		<!-- Left sidebar content -->
+		<LeftSidebar></LeftSidebar>
 	</div>
-{:else}
-	<p>Loading ...</p>
-{/if}
+
+	<div class="flex-1 overflow-y-auto p-4">
+		<!-- Main content -->
+		<MainContent />
+	</div>
+
+	<div
+		in:slide={{ from: 300 }}
+		class="w-full sm:flex-none sm:w-64 bg-yellow-100"
+		style:width={$sidebar.rightOpen ? '300px' : '0px'}
+	>
+		<!-- Right sidebar content -->
+		<RightSidebar></RightSidebar>
+	</div>
+</div>
+
+<style>
+	/* To make sure transitions apply to width changes */
+	div {
+		transition: width 0.3s ease;
+	}
+</style>
