@@ -50,7 +50,7 @@
 	<!-- mobile menu -->
 	<div class={`md:hidden bg-yellow-100 pt-4 ${isOpen ? 'block' : 'hidden'}`}>
 		{#each Object.entries(navbarItems) as [label, route]}
-			<a href={route} class="block py-1 px-4 hover:bg-yellow-200 hover:text-black rounded-sm"
+			<a href={route} class="block py-1 px-4 hover:bg-yellow-300 hover:text-black rounded-sm"
 				>{label}</a
 			>
 		{/each}

@@ -21,6 +21,20 @@
         background: #6d6306; 
     }
 
+    /* CODEMIRRO GUTTERS */
+    .ͼ2 .cm-gutters {
+        background-color: #facc157e;
+        color: #6c6c6c;
+        border-right: 1px solid #ddd;
+    }
+
+    .ͼ2 .cm-activeLine {
+        background-color: #facc15;
+    }
+
+    .ͼ2 .cm-activeLineGutter {
+        background-color: #facc15;
+    }
 
   @layer components {
 
