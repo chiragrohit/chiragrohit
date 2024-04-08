@@ -27,7 +27,6 @@
 			<div class="card-body">
 				<p class="card-title">Electoral Bonds Visualization</p>
 				<p class="card-text">An interactive visualization of Electoral Bonds.</p>
-
 				<a href="/projects#" class="btn-primary">View Project</a>
 			</div>
 		</div>

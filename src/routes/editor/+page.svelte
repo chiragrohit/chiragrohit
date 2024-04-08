@@ -9,32 +9,34 @@
 <div class="flex justify-between text-white pl-2 pr-2 pb-2">
 	<button
 		on:click={sidebar.toggleLeft}
-		class=" px-4 rounded-sm bg-yellow-400 text-yellow-950 hover:bg-yellow-300">Left</button
+		class=" px-4 rounded-sm bg-gray-400 dark:bg-gray-300 text-gray-950 hover:bg-gray-300"
+		>Left</button
 	>
 	<button
 		on:click={sidebar.toggleRight}
-		class=" px-4 rounded-sm bg-yellow-400 text-yellow-950 hover:bg-yellow-300">Right</button
+		class=" px-4 rounded-sm bg-gray-400 dark:bg-gray-300 text-gray-950 hover:bg-gray-300"
+		>Right</button
 	>
 </div>
 
 <div class="flex h-screen overflow-hidden">
 	<div
 		in:slide={{ from: -300 }}
-		class="w-full sm:flex-none sm:w-64 bg-yellow-100"
+		class="w-full sm:flex-none sm:w-64 bg-gray-100 dark:bg-gray-400 rounded-md"
 		style:width={$sidebar.leftOpen ? '300px' : '0px'}
 	>
 		<!-- Left sidebar content -->
 		<LeftSidebar></LeftSidebar>
 	</div>
 
-	<div class="flex-1 overflow-y-auto p-4">
+	<div class="flex-1 overflow-y-auto p-4 ml-4 mr-4 dark:bg-gray-500 rounded-md">
 		<!-- Main content -->
 		<MainContent />
 	</div>
 
 	<div
 		in:slide={{ from: 300 }}
-		class="w-full sm:flex-none sm:w-64 bg-yellow-100"
+		class="w-full sm:flex-none sm:w-64 bg-gray-100 dark:bg-gray-400 rounded-md"
 		style:width={$sidebar.rightOpen ? '300px' : '0px'}
 	>
 		<!-- Right sidebar content -->
