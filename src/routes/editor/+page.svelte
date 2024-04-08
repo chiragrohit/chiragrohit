@@ -21,7 +21,7 @@
 		<LeftSidebar></LeftSidebar>
 	</div>
 
-	<div class="flex-1 overflow-y-auto p-4 ml-4 mr-4 dark:bg-slate-500 rounded-md">
+	<div class="flex-1 overflow-y-auto p-4 ml-4 mr-4 rounded-md">
 		<!-- Main content -->
 		<MainContent />
 	</div>

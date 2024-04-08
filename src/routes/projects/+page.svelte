@@ -8,6 +8,15 @@
 		<div class="flex flex-wrap justify-between">
 			<div class="card">
 				<div class="card-body">
+					<p class="card-title">Current Website</p>
+					<p class="card-text">Tech stack for this portfolio website.</p>
+
+					<a href="/projects/this-website" class="btn-primary">Coming Soon</a>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-body">
 					<p class="card-title">Editor</p>
 					<p class="card-text">A markdown-based editor using codemirror</p>
 
@@ -20,7 +29,7 @@
 					<p class="card-title">Svelte in Markdown</p>
 					<p class="card-text">Write Svelte components in Markdown</p>
 					<a href="https://github.com/chiragrohit/EvidenceDemo" target="_blank" class="btn-primary"
-						>View Project</a
+						>View</a
 					>
 				</div>
 			</div>
@@ -33,7 +42,7 @@
 				<div class="card-body">
 					<p class="card-title">Electoral Bonds Visualization</p>
 					<p class="card-text">An interactive visualization of Electoral Bonds.</p>
-					<a href="/projects#" class="btn-primary">View Project</a>
+					<a href="#" class="btn-primary">Coming Soon</a>
 				</div>
 			</div>
 		</div>
