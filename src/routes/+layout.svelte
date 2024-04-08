@@ -2,10 +2,15 @@
 	import '../app.css';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import { fade } from 'svelte/transition';
+	import * as config from '$lib/config';
 
 	export let data;
 	export const prerender = true;
 </script>
+
+<svelte:head>
+	<title>{config.title}</title>
+</svelte:head>
 
 <Navbar navbarItems={data.navbarItems} />
 {#key data.url}

@@ -12,8 +12,9 @@
 </svelte:head>
 
 <article class="max-w-screen-lg mx-auto">
+	<a class="btn-primary" href="/blog">&larr; Blogs</a>
 	<!-- Article Heading -->
-	<div class="bg-slate-300 dark:bg-slate-800 p-4 rounded-md">
+	<div class="bg-slate-300 dark:bg-slate-800 p-4 rounded-md mt-8">
 		<h1 class="text-3xl">{data.meta.title}</h1>
 		<p class="text-sm text-gray-600 dark:text-gray-400">
 			Published at {formatDate(data.meta.date)}
