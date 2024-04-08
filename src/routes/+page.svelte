@@ -4,11 +4,11 @@
 </script>
 
 <div
-	class="h-[80vh] bg-gradient-to-br from-yellow-100 via-yellow-300 to-yellow-600 dark:bg-gradient-to-b dark:from-slate-600 dark:via-sky-950 dark:to-slate-950 flex flex-col justify-center p-8"
+	class="h-[70vh] bg-gradient-to-br from-yellow-100 via-yellow-300 to-yellow-600 dark:bg-gradient-to-b dark:from-slate-600 dark:via-sky-950 dark:to-slate-950 flex flex-col justify-center p-8"
 >
-	<h1 class="text-8xl">Web Dev</h1>
-	<h1 class="text-8xl">Data Science</h1>
-	<h1 class="text-8xl">Gen AI</h1>
+	<h1 class="text-6xl md:text-8xl">Web Dev</h1>
+	<h1 class="text-6xl md:text-8xl">Data Science</h1>
+	<h1 class="text-6xl md:text-8xl">Gen AI</h1>
 </div>
 <div class="">
 	<!-- Posts -->
