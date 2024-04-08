@@ -15,7 +15,7 @@
 	<button
 		class="{editMode
 			? 'bg-emerald-400 hover:bg-emerald-400'
-			: 'bg-gray-400 hover:bg-gray-400'} text-white min-w-[100px] px-2 py-1 rounded-sm"
+			: 'bg-slate-400 hover:bg-slate-400'} text-white min-w-[100px] px-2 py-1 rounded-sm"
 		on:click={toggleEditMode}
 	>
 		{#if editMode}

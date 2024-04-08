@@ -27,7 +27,7 @@
 	}
 </script>
 
-<div>
+<div class="pr-4 md:pr-0 flex items-center">
 	<input checked={darkMode} on:click={handleSwitchDarkMode} type="checkbox" id="theme-toggle" />
 	<label for="theme-toggle" />
 </div>
@@ -38,7 +38,13 @@
 	}
 
 	#theme-toggle + label {
-		@apply inline-block cursor-pointer h-8 w-8 absolute top-2 right-2 rounded-full duration-300 content-[''];
+		@apply inline-block cursor-pointer h-8 w-8 rounded-full duration-300 content-[''];
+	}
+
+	@media (max-width: 767px) {
+		#theme-toggle + label {
+			@apply inline-block cursor-pointer h-6 w-6 rounded-full duration-300 content-[''];
+		}
 	}
 
 	#theme-toggle:not(:checked) + label {

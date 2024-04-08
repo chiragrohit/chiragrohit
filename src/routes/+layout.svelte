@@ -1,14 +1,12 @@
 <script>
 	import '../app.css';
 	import Navbar from '$lib/components/Navbar.svelte';
-	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
 	import { fly } from 'svelte/transition';
 
 	export let data;
 </script>
 
 <Navbar navbarItems={data.navbarItems} />
-<ThemeSwitch />
 {#key data.url}
 	<div
 		class="overflow-auto p-4"
