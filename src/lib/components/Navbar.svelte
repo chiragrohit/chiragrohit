@@ -50,9 +50,9 @@
 	</div>
 
 	<!-- mobile menu -->
-	<div class={`md:hidden bg-slate-100 dark:bg-slate-800 pt-4 ${isOpen ? 'block' : 'hidden'}`}>
+	<div class={`md:hidden bg-slate-200 dark:bg-slate-900 pt-4 ${isOpen ? 'block' : 'hidden'}`}>
 		{#each Object.entries(navbarItems) as [label, route]}
-			<a href={route} class="block py-1 px-4 hover:bg-slate-300 hover:text-black rounded-sm"
+			<a href={route} class="block py-1 px-4 hover:bg-slate-400 hover:text-black rounded-sm"
 				>{label}</a
 			>
 		{/each}

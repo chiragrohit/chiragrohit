@@ -12,12 +12,7 @@
 </script>
 
 <div class="flex justify-end">
-	<button
-		class="{editMode
-			? 'bg-emerald-400 hover:bg-emerald-400'
-			: 'bg-slate-400 hover:bg-slate-400'} text-white min-w-[100px] px-2 py-1 rounded-sm"
-		on:click={toggleEditMode}
-	>
+	<button class="btn-primary py-1" on:click={toggleEditMode}>
 		{#if editMode}
 			Save
 		{:else}

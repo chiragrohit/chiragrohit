@@ -1,18 +1,14 @@
 <script>
 	import '../app.css';
 	import Navbar from '$lib/components/Navbar.svelte';
-	import { fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 
 	export let data;
 </script>
 
 <Navbar navbarItems={data.navbarItems} />
 {#key data.url}
-	<div
-		class="overflow-auto p-4"
-		in:fly={{ y: 200, duration: 300, delay: 300 }}
-		out:fly={{ y: -200, duration: 300 }}
-	>
+	<div class="overflow-auto p-4" transition:fade={{ delay: 100, duration: 300 }}>
 		<slot />
 	</div>
 {/key}

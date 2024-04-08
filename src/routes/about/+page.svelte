@@ -2,17 +2,19 @@
 	import { Github, Facebook, Twitter, Mail, Instagram, Linkedin } from 'lucide-svelte';
 </script>
 
-<div class="flex flex-col md:flex-row bg-slate-300 dark:bg-slate-800 p-4 max-w-screen-lg mx-auto">
+<div
+	class="mx-auto flex max-w-screen-lg flex-col rounded bg-slate-300 dark:bg-slate-800 md:flex-row"
+>
 	<!-- Aside for Photo and Socials -->
-	<aside class="flex flex-col items-center md:w-1/4">
-		<img src="profile.webp" class="w-[30%] md:w-[50%] rounded-full mb-4" alt="Profile" />
+	<aside class="m-4 flex flex-col items-center rounded md:w-1/4">
+		<img src="profile.webp" class="mb-4 w-[30%] rounded-full md:w-[50%]" alt="Profile" />
 		<h1 class="text-3xl font-semibold">Chirag Rohit</h1>
-		<div class="flex mt-2">
+		<div class="mt-2 flex">
 			<div class="flex flex-col space-y-2">
 				<a
 					href="https://github.com/chiragrohit"
 					target="_blank"
-					class="flex space-x-2 p-2 hover:bg-slate-800 dark:hover:bg-slate-700 hover:text-white"
+					class="flex space-x-2 rounded p-2 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700"
 				>
 					<Github />
 					<span>@chiragrohit</span>
@@ -20,7 +22,7 @@
 				<a
 					href="https://twitter.com/iamchiragrohit"
 					target="_blank"
-					class="flex space-x-2 p-2 hover:bg-slate-800 dark:hover:bg-slate-700 hover:text-white"
+					class="flex space-x-2 rounded p-2 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700"
 				>
 					<Twitter />
 					<span>@iamchiragrohit</span>
@@ -28,7 +30,7 @@
 				<a
 					href="https://linkedin.com/in/iamchiragrohit"
 					target="_blank"
-					class="flex space-x-2 p-2 hover:bg-slate-800 dark:hover:bg-slate-700 hover:text-white"
+					class="flex space-x-2 rounded p-2 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700"
 				>
 					<Linkedin />
 					<span>@iamchiragrohit</span>
@@ -36,7 +38,7 @@
 				<a
 					href="https://instagram.com/iamchiragrohit"
 					target="_blank"
-					class="flex space-x-2 p-2 hover:bg-slate-800 dark:hover:bg-slate-700 hover:text-white"
+					class="flex space-x-2 rounded p-2 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700"
 				>
 					<Instagram />
 					<span>@iamchiragrohit</span>
@@ -44,14 +46,14 @@
 				<a
 					href="https://facebook.com/iamchiragrohit"
 					target="_blank"
-					class="flex space-x-2 p-2 hover:bg-slate-800 dark:hover:bg-slate-700 hover:text-white"
+					class="flex space-x-2 rounded p-2 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700"
 				>
 					<Facebook />
 					<span>@iamchiragrohit</span>
 				</a>
 				<a
 					href="mailto:iamchiragrohit@gmail.com"
-					class="flex space-x-2 p-2 hover:bg-slate-800 dark:hover:bg-slate-700 hover:text-white"
+					class="flex space-x-2 rounded p-2 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700"
 				>
 					<Mail />
 					<span>iamchiragrohit@gmail.com</span>
@@ -60,7 +62,19 @@
 		</div>
 	</aside>
 
-	<div class="flex flex-col items-center md:items-start pl-4 md:w-3/4">
-		<h1 class="text-3xl">Hello<span>👋</span></h1>
+	<div
+		class="m-4 flex flex-col items-center rounded bg-slate-200 p-4 dark:bg-slate-900 md:w-3/4 md:items-start"
+	>
+		<h1 class="text-3xl md:pl-2">Hello<span>👋</span></h1>
+		<p class="rounded p-2 hover:bg-slate-300 dark:hover:bg-slate-800">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ea impedit magni beatae! Eos
+			adipisci in quam ratione, maxime esse, aut, vero doloremque voluptates modi quae?
+			Reprehenderit necessitatibus unde dolores?
+		</p>
+		<p class="rounded p-2 hover:bg-slate-300 dark:hover:bg-slate-800">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ea impedit magni beatae! Eos
+			adipisci in quam ratione, maxime esse, aut, vero doloremque voluptates modi quae?
+			Reprehenderit necessitatibus unde dolores?
+		</p>
 	</div>
 </div>

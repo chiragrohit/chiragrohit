@@ -7,22 +7,14 @@
 </script>
 
 <div class="flex justify-between text-white pl-2 pr-2 pb-2">
-	<button
-		on:click={sidebar.toggleLeft}
-		class=" px-4 rounded-sm bg-slate-400 dark:bg-slate-300 text-slate-950 hover:bg-slate-300"
-		>Left</button
-	>
-	<button
-		on:click={sidebar.toggleRight}
-		class=" px-4 rounded-sm bg-slate-400 dark:bg-slate-300 text-slate-950 hover:bg-slate-300"
-		>Right</button
-	>
+	<button on:click={sidebar.toggleLeft} class="btn-primary py-1">Left</button>
+	<button on:click={sidebar.toggleRight} class="btn-primary py-1">Right</button>
 </div>
 
 <div class="flex h-screen overflow-hidden">
 	<div
 		in:slide={{ from: -300 }}
-		class="w-full sm:flex-none sm:w-64 bg-slate-300 dark:bg-slate-600 dark:text-slate-200 rounded-md"
+		class="w-full sm:flex-none sm:w-64 bg-slate-300 dark:bg-slate-800 dark:text-slate-200 rounded-md"
 		style:width={$sidebar.leftOpen ? '300px' : '0px'}
 	>
 		<!-- Left sidebar content -->
@@ -36,7 +28,7 @@
 
 	<div
 		in:slide={{ from: 300 }}
-		class="w-full sm:flex-none sm:w-64 bg-slate-300 dark:bg-slate-600 dark:text-slate-200 rounded-md"
+		class="w-full sm:flex-none sm:w-64 bg-slate-300 dark:bg-slate-800 dark:text-slate-200 rounded-md"
 		style:width={$sidebar.rightOpen ? '300px' : '0px'}
 	>
 		<!-- Right sidebar content -->

@@ -1,7 +1,3 @@
-<script>
-	import { theme } from '$lib/stores';
-</script>
-
 <div class="max-w-screen-lg mx-auto">
 	<h1 class="text-3xl">Components</h1>
 
