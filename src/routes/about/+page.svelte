@@ -5,7 +5,7 @@
 <div class="flex flex-col md:flex-row bg-slate-300 dark:bg-slate-800 p-4 max-w-screen-lg mx-auto">
 	<!-- Aside for Photo and Socials -->
 	<aside class="flex flex-col items-center md:w-1/4">
-		<img src="profile.png" class="w-[30%] md:w-[50%] rounded-full mb-4" alt="Profile" />
+		<img src="profile.webp" class="w-[30%] md:w-[50%] rounded-full mb-4" alt="Profile" />
 		<h1 class="text-3xl font-semibold">Chirag Rohit</h1>
 		<div class="flex mt-2">
 			<div class="flex flex-col space-y-2">
@@ -60,7 +60,7 @@
 		</div>
 	</aside>
 
-	<div class="flex flex-col pl-4 md:w-3/4">
+	<div class="flex flex-col items-center md:items-start pl-4 md:w-3/4">
 		<h1 class="text-3xl">Hello<span>👋</span></h1>
 	</div>
 </div>
