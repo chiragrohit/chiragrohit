@@ -22,7 +22,7 @@
 <div class="flex h-screen overflow-hidden">
 	<div
 		in:slide={{ from: -300 }}
-		class="w-full sm:flex-none sm:w-64 bg-gray-100 dark:bg-gray-400 rounded-md"
+		class="w-full sm:flex-none sm:w-64 bg-gray-300 dark:bg-gray-600 dark:text-gray-200 rounded-md"
 		style:width={$sidebar.leftOpen ? '300px' : '0px'}
 	>
 		<!-- Left sidebar content -->
@@ -36,7 +36,7 @@
 
 	<div
 		in:slide={{ from: 300 }}
-		class="w-full sm:flex-none sm:w-64 bg-gray-100 dark:bg-gray-400 rounded-md"
+		class="w-full sm:flex-none sm:w-64 bg-gray-300 dark:bg-gray-600 dark:text-gray-200 rounded-md"
 		style:width={$sidebar.rightOpen ? '300px' : '0px'}
 	>
 		<!-- Right sidebar content -->
