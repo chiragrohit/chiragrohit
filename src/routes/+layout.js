@@ -2,6 +2,7 @@ const navbarItems = {
   Home: "/",
   Projects: "/projects",
   Components: "/components",
+  Blog: "/blog",
   About: "/about",
 };
 
