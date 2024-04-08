@@ -5,7 +5,6 @@
 	import * as config from '$lib/config';
 
 	export let data;
-	export const prerender = true;
 </script>
 
 <svelte:head>

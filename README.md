@@ -6,4 +6,4 @@ Portfolio: https://chiragrohit.vercel.app/
 
 - [x] Add Editor
 - [x] Dark Theme Toggle
-- [ ] Add Markdown Blog
+- [x] Add Markdown Blog

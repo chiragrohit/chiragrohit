@@ -1,4 +1,4 @@
-<div class="max-w-screen-lg mx-auto">
+<div class="max-w-screen-lg mx-auto flex flex-col gap-8">
 	<h1 class="text-3xl">Components</h1>
 
 	<!-- ################################################# BUTTON Component -->
