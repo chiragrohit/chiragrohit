@@ -3,9 +3,9 @@
 		<h1 class="text-3xl">Project</h1>
 	</div>
 
-	<div class="bg-slate-200 dark:bg-slate-900 p-4 rounded">
+	<div class="bg-yellow-200 dark:bg-slate-900 p-4 rounded">
 		<h1 class="text-2xl text-center">Web Dev</h1>
-		<div class="flex flex-wrap justify-between">
+		<div class="flex flex-wrap gap-4 justify-center">
 			<div class="card">
 				<div class="card-body">
 					<p class="card-title">Current Website</p>
@@ -33,9 +33,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="bg-slate-200 dark:bg-slate-900 p-4 rounded">
+	<div class="bg-yellow-200 dark:bg-slate-900 p-4 rounded">
 		<h1 class="text-2xl text-center">Data Science</h1>
-		<div class="flex flex-wrap justify-between">
+		<div class="flex flex-wrap gap-4 justify-center">
 			<div class="card">
 				<div class="card-body">
 					<p class="card-title">Electoral Bonds Visualization</p>
@@ -44,5 +44,9 @@
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<div class="bg-yellow-200 dark:bg-slate-900 p-4 rounded">
+		<h1 class="text-2xl text-center">Gen AI</h1>
 	</div>
 </div>

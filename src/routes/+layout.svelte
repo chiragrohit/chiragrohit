@@ -10,6 +10,10 @@
 <svelte:head>
 	<title>{config.title}</title>
 </svelte:head>
+<!-- Work in progress -->
+<p class="fixed bottom-0 left-0 bg-yellow-200 dark:bg-slate-800 p-2">
+	Portfolio under construction!
+</p>
 
 <Navbar navbarItems={data.navbarItems} />
 {#key data.url}

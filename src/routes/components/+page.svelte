@@ -1,8 +1,8 @@
 <div class="max-w-screen-lg mx-auto flex flex-col gap-8">
 	<h1 class="text-3xl">Components</h1>
 
-	<!-- ################################################# BUTTON Component -->
 	<diV class="flex flex-col space-y-4">
+		<!-- ################################################# BUTTON Component -->
 		<div>
 			<p class="text-xl">Button</p>
 			<div>
@@ -10,8 +10,24 @@
 			</div>
 		</div>
 
-		<!-- ################################################# CARD Component -->
+		<!-- ################################################# POST Component -->
+		<div>
+			<ul class="flex flex-col gap-2 max-w-screen-lg mx-auto">
+				<li class="posts">
+					<a href="#">
+						<h2 class="post-title">Post Title</h2>
+						<p class="post-date">Apr 8, 2024</p>
+						<p class="post-description">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, a, corporis
+							consequuntur voluptate quaerat quod natus animi sit dolore architecto, magni veniam
+							aperiam aut! Ad nisi eveniet debitis adipisci deserunt.
+						</p>
+					</a>
+				</li>
+			</ul>
+		</div>
 
+		<!-- ################################################# CARD Component -->
 		<p class="text-xl">Card</p>
 		<div class="flex flex-wrap justify-between">
 			<div class="card">

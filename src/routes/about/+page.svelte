@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="mx-auto flex max-w-screen-lg flex-col rounded bg-slate-300 dark:bg-slate-800 md:flex-row"
+	class="mx-auto flex max-w-screen-lg flex-col rounded bg-yellow-300 dark:bg-slate-800 md:flex-row"
 >
 	<!-- Aside for Photo and Socials -->
 	<aside class="m-4 flex flex-col items-center rounded md:w-1/4">
@@ -14,7 +14,7 @@
 				<a
 					href="https://github.com/chiragrohit"
 					target="_blank"
-					class="flex space-x-2 rounded p-2 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700"
+					class="flex space-x-2 rounded p-2 hover:bg-yellow-800 hover:text-white dark:hover:bg-slate-700"
 				>
 					<Github />
 					<span>@chiragrohit</span>
@@ -22,7 +22,7 @@
 				<a
 					href="https://twitter.com/iamchiragrohit"
 					target="_blank"
-					class="flex space-x-2 rounded p-2 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700"
+					class="flex space-x-2 rounded p-2 hover:bg-yellow-800 hover:text-white dark:hover:bg-slate-700"
 				>
 					<Twitter />
 					<span>@iamchiragrohit</span>
@@ -30,7 +30,7 @@
 				<a
 					href="https://linkedin.com/in/iamchiragrohit"
 					target="_blank"
-					class="flex space-x-2 rounded p-2 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700"
+					class="flex space-x-2 rounded p-2 hover:bg-yellow-800 hover:text-white dark:hover:bg-slate-700"
 				>
 					<Linkedin />
 					<span>@iamchiragrohit</span>
@@ -38,7 +38,7 @@
 				<a
 					href="https://instagram.com/iamchiragrohit"
 					target="_blank"
-					class="flex space-x-2 rounded p-2 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700"
+					class="flex space-x-2 rounded p-2 hover:bg-yellow-800 hover:text-white dark:hover:bg-slate-700"
 				>
 					<Instagram />
 					<span>@iamchiragrohit</span>
@@ -46,14 +46,14 @@
 				<a
 					href="https://facebook.com/iamchiragrohit"
 					target="_blank"
-					class="flex space-x-2 rounded p-2 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700"
+					class="flex space-x-2 rounded p-2 hover:bg-yellow-800 hover:text-white dark:hover:bg-slate-700"
 				>
 					<Facebook />
 					<span>@iamchiragrohit</span>
 				</a>
 				<a
 					href="mailto:iamchiragrohit@gmail.com"
-					class="flex space-x-2 rounded p-2 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700"
+					class="flex space-x-2 rounded p-2 hover:bg-yellow-800 hover:text-white dark:hover:bg-slate-700"
 				>
 					<Mail />
 					<span>iamchiragrohit@gmail.com</span>
@@ -63,15 +63,15 @@
 	</aside>
 
 	<div
-		class="m-4 flex flex-col items-center rounded bg-slate-200 p-4 dark:bg-slate-900 md:w-3/4 md:items-start"
+		class="m-4 flex flex-col items-center rounded bg-yellow-200 p-4 dark:bg-slate-900 md:w-3/4 md:items-start"
 	>
 		<h1 class="text-3xl md:pl-2">Hello<span>👋</span></h1>
-		<p class="rounded p-2 hover:bg-slate-300 dark:hover:bg-slate-800">
+		<p class="rounded p-2 hover:bg-yellow-300 dark:hover:bg-slate-800">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ea impedit magni beatae! Eos
 			adipisci in quam ratione, maxime esse, aut, vero doloremque voluptates modi quae?
 			Reprehenderit necessitatibus unde dolores?
 		</p>
-		<p class="rounded p-2 hover:bg-slate-300 dark:hover:bg-slate-800">
+		<p class="rounded p-2 hover:bg-yellow-300 dark:hover:bg-slate-800">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ea impedit magni beatae! Eos
 			adipisci in quam ratione, maxime esse, aut, vero doloremque voluptates modi quae?
 			Reprehenderit necessitatibus unde dolores?

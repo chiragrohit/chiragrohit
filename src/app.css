@@ -13,13 +13,23 @@
         background: transparent; 
     }
 
-    ::-webkit-scrollbar-thumb {
+        ::-webkit-scrollbar-thumb {
+        background: #E3B425; /* Dark mode scrollbar thumb color */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #CD8F08; 
+    }
+    
+    .dark ::-webkit-scrollbar-thumb {
         background: #1F2937;
     }
+    
     /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
+    .dark ::-webkit-scrollbar-thumb:hover {
         background: #bbb6b6; 
     }
+
 
     /* CODEMIRRO GUTTERS */
     .ͼ2 .cm-gutters {
@@ -40,17 +50,18 @@
 
     body {
         transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-        @apply bg-white dark:bg-slate-950 text-black dark:text-white;
+        @apply bg-yellow-100 text-yellow-950 dark:bg-slate-950 dark:text-white;
     }
 
 
     .btn-primary{
-        @apply bg-slate-300 dark:bg-slate-800 dark:text-slate-100 text-black px-6 py-2 border-2 border-slate-500 dark:border-slate-400 rounded-md shadow-md hover:bg-slate-500 hover:text-white dark:hover:text-black dark:hover:bg-slate-400 transition-all duration-300 ease-in-out;
+        @apply bg-yellow-200 hover:bg-yellow-300 dark:bg-slate-800 dark:text-slate-100 text-black px-6 py-2 border-2 border-yellow-300 dark:border-slate-400 rounded-md shadow-md  dark:hover:text-black dark:hover:bg-slate-400 transition-all duration-300 ease-in-out;
     }
 
+    /* CARD */
     
     .card{
-        @apply w-full md:max-w-[30%] bg-slate-300 hover:bg-slate-400 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 p-4 mt-4 md:mt-0 rounded-lg shadow-md;
+        @apply w-full md:max-w-[30%] bg-yellow-300 hover:bg-yellow-400 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 p-4 mt-4 md:mt-0 rounded-lg shadow-md;
     }
 
     .card-body{
@@ -63,6 +74,25 @@
 
     .card-text{
         @apply text-lg;
+    }
+
+
+    /* BLOG */
+
+    .posts{
+        @apply bg-yellow-200 dark:bg-slate-800 hover:bg-yellow-300 dark:hover:bg-slate-700 p-4 rounded-lg shadow-md
+    }
+
+    .post-title{
+        @apply text-2xl capitalize font-bold
+    }
+
+    .post-date{
+        @apply text-sm text-gray-600 dark:text-gray-400
+    }
+
+    .post-description{
+        @apply text-lg mt-2 text-gray-600 dark:text-gray-400
     }
     
   }
