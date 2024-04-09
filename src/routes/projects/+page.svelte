@@ -6,50 +6,50 @@
 		<h1 class="text-3xl">Project</h1>
 	</div>
 
-	<div class="bg-yellow-300 dark:bg-slate-900 p-4 rounded">
+	<div class="border-2 border-yellow-800 dark:border-slate-600 p-4 rounded">
 		<h1 class="text-2xl text-center">Web Dev</h1>
 		<div class="flex flex-wrap gap-4 justify-center">
 			<div class="card">
 				<div class="card-body">
-					<p class="card-title">Current Website</p>
-					<p class="card-text">Tech stack for this portfolio website.</p>
+					<h1>Current Website</h1>
+					<p>Tech stack for this portfolio website.</p>
 
-					<a href="#" class="btn-primary">Coming Soon</a>
+					<a href="#">Coming Soon</a>
 				</div>
 			</div>
 
 			<div class="card">
 				<div class="card-body">
-					<p class="card-title">Editor</p>
-					<p class="card-text">A markdown-based editor using codemirror</p>
+					<h1>Editor</h1>
+					<p>A markdown-based editor using codemirror</p>
 
-					<a href="/editor" class="btn-primary">View</a>
+					<a href="/editor">View</a>
 				</div>
 			</div>
 
 			<div class="card">
 				<div class="card-body">
-					<p class="card-title">Svelte in Markdown</p>
-					<p class="card-text">Write Svelte components in Markdown</p>
-					<a href="/blog/svelte-markdown" class="btn-primary">View</a>
+					<h1>Svelte in Markdown</h1>
+					<p>Write Svelte components in Markdown</p>
+					<a href="/blog/svelte-markdown">View</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="bg-yellow-300 dark:bg-slate-900 p-4 rounded">
+	<div class="border-2 border-yellow-800 dark:border-slate-600 p-4 rounded">
 		<h1 class="text-2xl text-center">Data Science</h1>
 		<div class="flex flex-wrap gap-4 justify-center">
 			<div class="card">
 				<div class="card-body">
-					<p class="card-title">Electoral Bonds Visualization</p>
-					<p class="card-text">An interactive visualization of Electoral Bonds.</p>
-					<a href="#" class="btn-primary">Coming Soon</a>
+					<h1>Electoral Bonds Visualization</h1>
+					<p>An interactive visualization of Electoral Bonds.</p>
+					<a href="#">Coming Soon</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="bg-yellow-300 dark:bg-slate-900 p-4 rounded">
+	<div class="border-2 border-yellow-800 dark:border-slate-600 p-4 rounded">
 		<h1 class="text-2xl text-center">Gen AI</h1>
 	</div>
 </div>

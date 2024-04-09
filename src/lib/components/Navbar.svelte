@@ -21,7 +21,7 @@
 						{#each Object.entries(navbarItems) as [label, route]}
 							<a
 								href={route}
-								class="py-2 px-3 hover:bg-yellow-200 hover:text-black dark:hover:bg-slate-200 rounded"
+								class="py-2 px-3 hover:bg-yellow-200 hover:text-black dark:hover:bg-slate-200"
 								>{label}</a
 							>
 						{/each}
@@ -55,8 +55,9 @@
 	<div class={`md:hidden bg-yellow-200 dark:bg-slate-900 pt-4 ${isOpen ? 'block' : 'hidden'}`}>
 		{#each Object.entries(navbarItems) as [label, route]}
 			<a
+				role="button"
 				href={route}
-				class="block py-1 px-4 hover:bg-yellow-300 hover:text-black dark:hover:bg-slate-200 rounded-sm"
+				class="block py-1 px-4 hover:bg-yellow-300 hover:text-black dark:hover:bg-slate-200"
 				>{label}</a
 			>
 		{/each}

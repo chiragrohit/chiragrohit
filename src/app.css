@@ -60,36 +60,41 @@
 
 
     .btn-primary{
-        @apply bg-yellow-200 hover:bg-yellow-400 dark:bg-slate-800 dark:text-slate-100 text-black px-6 py-2 border-2 border-yellow-400 dark:border-slate-400 rounded-md shadow-md  dark:hover:text-black dark:hover:bg-slate-400 transition-all duration-300 ease-in-out;
+        @apply bg-yellow-200 hover:bg-yellow-400 dark:bg-slate-800 dark:text-slate-100 text-black px-6 py-2 border-2 border-yellow-400 dark:border-slate-400 shadow-md  dark:hover:text-black dark:hover:bg-slate-400 transition-all duration-300 ease-in-out;
     }
+
 
     /* CARD */
     
     .card{
-        @apply w-full md:max-w-[30%] bg-yellow-200 hover:bg-yellow-400 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 p-4 mt-4 md:mt-0 rounded-lg shadow-md;
+        @apply w-full md:max-w-[30%] bg-yellow-200 hover:bg-yellow-300 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 p-4 mt-4 md:mt-0 shadow-md;
     }
 
-    .card-body{
-        @apply flex flex-col justify-center items-center space-y-4 text-center; 
+    .card .card-body{
+        @apply flex flex-col justify-between gap-2 h-full text-center; 
     }
 
-    .card-title{
+    .card-body h1{
         @apply text-2xl font-bold;
     }
 
-    .card-text{
+    .card-body p{
         @apply text-lg;
+    }
+
+    .card-body button, .card-body a{
+        @apply btn-primary w-full
     }
 
 
     /* BLOG */
 
     .posts{
-        @apply bg-yellow-200 dark:bg-slate-800 hover:bg-yellow-400 dark:hover:bg-slate-700 p-4 rounded-lg shadow-md
+        @apply bg-yellow-200 dark:bg-slate-800 hover:bg-yellow-300 dark:hover:bg-slate-700 p-4 shadow-md
     }
 
     .post-title{
-        @apply text-2xl capitalize font-bold
+        @apply text-xl capitalize font-bold
     }
 
     .post-date{
@@ -97,7 +102,7 @@
     }
 
     .post-description{
-        @apply text-lg mt-2 text-gray-600 dark:text-gray-400
+        @apply mt-2 text-gray-600 dark:text-gray-400
     }
     
   }

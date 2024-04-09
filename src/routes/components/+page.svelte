@@ -18,7 +18,7 @@
 			<ul class="flex flex-col gap-2 max-w-screen-md mx-auto">
 				<li class="posts">
 					<a href="#">
-						<h2 class="post-title">Post Title</h2>
+						<h1 class="post-title">Post Title</h1>
 						<p class="post-date">Apr 8, 2024</p>
 						<p class="post-description">
 							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, a, corporis
@@ -35,13 +35,13 @@
 		<div class="flex flex-wrap justify-between">
 			<div class="card">
 				<div class="card-body">
-					<h1 class="card-title">Card Title</h1>
-					<p class="card-text">
+					<h1>Card Title</h1>
+					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, a, corporis
 						consequuntur voluptate quaerat quod natus animi sit dolore architecto, magni veniam
 						aperiam aut! Ad nisi eveniet debitis adipisci deserunt.
 					</p>
-					<button class="btn-primary">Buy Now</button>
+					<button>Buy Now</button>
 				</div>
 			</div>
 		</div></diV
