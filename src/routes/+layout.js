@@ -1,4 +1,3 @@
-export const prerender = true;
 const navbarItems = {
   Home: "/",
   Projects: "/projects",
