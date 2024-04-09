@@ -3,11 +3,7 @@ export default {
   content: ["./src/**/*.{html,js,svelte,ts}"],
   darkMode: "class",
   theme: {
-    extend: {
-      fontFamily: {
-        roboto: ["Roboto", "sans"],
-      },
-    },
+    extend: {},
   },
   plugins: [
     require("@tailwindcss/typography"),

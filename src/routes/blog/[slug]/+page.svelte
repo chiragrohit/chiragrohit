@@ -11,7 +11,7 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<article class="max-w-screen-lg mx-auto">
+<article class="max-w-screen-md mx-auto">
 	<a class="btn-primary" href="/blog">&larr; Blogs</a>
 	<!-- Article Heading -->
 	<div class="bg-yellow-300 dark:bg-slate-800 p-4 rounded-md mt-8">
@@ -29,6 +29,7 @@
 	</div>
 
 	<!-- Post -->
+
 	<div class="prose dark:prose-invert p-4">
 		<svelte:component this={data.content} />
 	</div>

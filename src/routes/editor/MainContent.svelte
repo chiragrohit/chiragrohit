@@ -20,7 +20,7 @@
 		{/if}
 	</button>
 </div>
-<div class="max-w-screen-lg">
+<div class="">
 	<div>
 		{#if editMode}
 			<CodeMirror

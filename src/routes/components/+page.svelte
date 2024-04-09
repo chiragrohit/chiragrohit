@@ -1,4 +1,7 @@
-<div class="max-w-screen-lg mx-auto flex flex-col gap-8">
+<svelte:head>
+	<title>Chirag Rohit - Components</title>
+</svelte:head>
+<div class="max-w-screen-md mx-auto flex flex-col gap-8">
 	<h1 class="text-3xl">Components</h1>
 
 	<diV class="flex flex-col space-y-4">
@@ -12,7 +15,7 @@
 
 		<!-- ################################################# POST Component -->
 		<div>
-			<ul class="flex flex-col gap-2 max-w-screen-lg mx-auto">
+			<ul class="flex flex-col gap-2 max-w-screen-md mx-auto">
 				<li class="posts">
 					<a href="#">
 						<h2 class="post-title">Post Title</h2>
@@ -34,12 +37,9 @@
 				<div class="card-body">
 					<h1 class="card-title">Card Title</h1>
 					<p class="card-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit, eveniet quam
-						quod, laboriosam dolores quas repellat dolor cum excepturi exercitationem, nemo labore!
-						Velit doloribus excepturi necessitatibus reprehenderit nihil eos? Lorem ipsum dolor sit
-						amet consectetur adipisicing elit. Qui veniam consequuntur commodi, deleniti animi
-						quibusdam, dolore numquam placeat officia excepturi, cupiditate repudiandae at
-						recusandae! Qui iusto cumque est adipisci incidunt?
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, a, corporis
+						consequuntur voluptate quaerat quod natus animi sit dolore architecto, magni veniam
+						aperiam aut! Ad nisi eveniet debitis adipisci deserunt.
 					</p>
 					<button class="btn-primary">Buy Now</button>
 				</div>

@@ -1,9 +1,12 @@
-<div class="max-w-screen-lg mx-auto flex flex-col gap-8">
+<svelte:head>
+	<title>Chirag Rohit - Projects</title>
+</svelte:head>
+<div class="max-w-screen-md mx-auto flex flex-col gap-8">
 	<div>
 		<h1 class="text-3xl">Project</h1>
 	</div>
 
-	<div class="bg-yellow-200 dark:bg-slate-900 p-4 rounded">
+	<div class="bg-yellow-300 dark:bg-slate-900 p-4 rounded">
 		<h1 class="text-2xl text-center">Web Dev</h1>
 		<div class="flex flex-wrap gap-4 justify-center">
 			<div class="card">
@@ -33,7 +36,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="bg-yellow-200 dark:bg-slate-900 p-4 rounded">
+	<div class="bg-yellow-300 dark:bg-slate-900 p-4 rounded">
 		<h1 class="text-2xl text-center">Data Science</h1>
 		<div class="flex flex-wrap gap-4 justify-center">
 			<div class="card">
@@ -46,7 +49,7 @@
 		</div>
 	</div>
 
-	<div class="bg-yellow-200 dark:bg-slate-900 p-4 rounded">
+	<div class="bg-yellow-300 dark:bg-slate-900 p-4 rounded">
 		<h1 class="text-2xl text-center">Gen AI</h1>
 	</div>
 </div>

@@ -3,7 +3,10 @@
 	export let data;
 </script>
 
-<div class="max-w-screen-lg mx-auto flex flex-col gap-8">
+<svelte:head>
+	<title>Chirag Rohit - Blog</title>
+</svelte:head>
+<div class="max-w-screen-md mx-auto flex flex-col gap-8">
 	<h1 class="text-4xl">Blog</h1>
 	<!-- Posts -->
 	<section>
