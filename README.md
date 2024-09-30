@@ -1,6 +1,6 @@
 # Hello 👋
 
-Portfolio: https://chiragrohit.vercel.app/ (Dead, on a break)
+Portfolio: https://chiragrohit.vercel.app/
 
 # Todos
 
