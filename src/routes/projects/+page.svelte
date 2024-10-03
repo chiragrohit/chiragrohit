@@ -41,9 +41,9 @@
 		<div class="flex flex-wrap gap-4 justify-center">
 			<div class="card">
 				<div class="card-body">
-					<h1>Electoral Bonds Visualization</h1>
-					<p>An interactive visualization of Electoral Bonds.</p>
-					<a href="#">Coming Soon</a>
+					<h1>Data Dashboard</h1>
+					<p>Interactive visualizations of global socio-economic indicators.</p>
+					<a href="/projects/datadashboard">View</a>
 				</div>
 			</div>
 		</div>

@@ -13,8 +13,8 @@
         background: transparent; 
     }
 
-        ::-webkit-scrollbar-thumb {
-        background: #E3B425; /* Dark mode scrollbar thumb color */
+    ::-webkit-scrollbar-thumb {
+        background: #E3B425; 
     }
 
     ::-webkit-scrollbar-thumb:hover {
@@ -25,7 +25,6 @@
         background: #1F2937;
     }
     
-    /* Handle on hover */
     .dark ::-webkit-scrollbar-thumb:hover {
         background: #bbb6b6; 
     }
@@ -33,27 +32,27 @@
 
     /* CODEMIRRO GUTTERS */
     .ͼ2 .cm-gutters {
-        background-color: #1f293784;
-        color: #6c6c6c;
+        background-color: #ffffff00;
         border-right: 1px solid #ddd;
     }
 
     .ͼ2 .cm-activeLine {
-        background-color: #1f293743;
+        background-color: #808da043;
     }
 
     .ͼ2 .cm-activeLineGutter {
-        background-color: #1f2937;
+        background-color: #707e913a;
     }
 
     .prose{
         max-width: 100%;
     }
+
+    
   @layer components {
 
     body {
         font-family: 'Trebuchet MS', sans-serif;
-        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
         @apply bg-yellow-100 text-yellow-950 dark:bg-slate-950 dark:text-white;
         
     }
@@ -104,5 +103,30 @@
     .post-description{
         @apply mt-2 text-gray-600 dark:text-gray-400
     }
+
+    /* DARK THEME */
     
+    #theme-toggle {
+        @apply invisible;
+    }
+  
+    #theme-toggle + label {
+        @apply inline-block cursor-pointer h-8 w-8 rounded-full duration-300 content-[''];
+    }
+  
+    @media (max-width: 767px) {
+        #theme-toggle + label {
+            @apply inline-block cursor-pointer h-6 w-6 rounded-full duration-300 content-[''];
+        }
+    }
+  
+    #theme-toggle:not(:checked) + label {
+        @apply bg-amber-400;
+    }
+  
+    #theme-toggle:checked + label {
+        @apply bg-transparent;
+        box-shadow: inset -8px -8px 1px 1px #ddd;
+    }
   }
+
