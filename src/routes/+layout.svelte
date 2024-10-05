@@ -11,7 +11,11 @@
 	<title>{config.title}</title>
 </svelte:head>
 <!-- Work in progress -->
-<p class="fixed bottom-0 left-0 p-2 bg-red-500 text-black">Portfolio under construction!</p>
+<p
+	class="fixed bottom-0 left-0 p-2 bg-red-500 bg-opacity-50 text-black rounded-tr-lg shadow-lg z-50"
+>
+	Portfolio under construction!
+</p>
 
 <Navbar navbarItems={data.navbarItems} />
 {#key data.url}
