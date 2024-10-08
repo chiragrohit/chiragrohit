@@ -46,10 +46,26 @@
 					<a href="/projects/datadashboard">View</a>
 				</div>
 			</div>
+			<div class="card">
+				<div class="card-body">
+					<h1>ECI Result</h1>
+					<p>Election Commision of India results</p>
+					<a href="/projects/ecidashboard">View</a>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<div class="border-2 border-yellow-800 dark:border-slate-600 p-4 rounded">
 		<h1 class="text-2xl text-center">Gen AI</h1>
+		<div class="flex flex-wrap gap-4 justify-center">
+			<div class="card">
+				<div class="card-body">
+					<h1>Llama 3.2 3B</h1>
+					<p>Llama 3.2 3B and Ollama through Modal.com</p>
+					<a href="/projects/llama3.2">View</a>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
