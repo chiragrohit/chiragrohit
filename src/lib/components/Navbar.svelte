@@ -33,7 +33,7 @@
 
 			<!-- mobile button goes here -->
 			<div class="md:hidden flex items-center">
-				<button class="pr-4" onclick={() => (isOpen = !isOpen)}>
+				<button class="pr-4" aria-label="Open the menu" onclick={() => (isOpen = !isOpen)}>
 					<svg
 						class="w-6 h-6"
 						fill="none"

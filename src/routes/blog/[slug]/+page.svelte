@@ -34,7 +34,9 @@
 
 	<!-- Post -->
 
-	<div class="prose dark:prose-invert p-4">
+	<div
+		class="prose prose-pre:bg-slate-800 prose-blockquote:bg-yellow-300 prose-blockquote:dark:bg-slate-800 dark:prose-invert p-4"
+	>
 		<data.content />
 	</div>
 </article>
