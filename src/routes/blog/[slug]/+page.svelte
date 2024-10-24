@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
 
-	export let data;
+	interface Props {
+		data: any;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <!-- SEO -->
@@ -31,6 +35,6 @@
 	<!-- Post -->
 
 	<div class="prose dark:prose-invert p-4">
-		<svelte:component this={data.content} />
+		<data.content />
 	</div>
 </article>

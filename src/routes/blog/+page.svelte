@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
-	export let data;
+	interface Props {
+		data: any;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>

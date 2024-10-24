@@ -3,8 +3,8 @@
 	import { markdown } from '@codemirror/lang-markdown';
 	import SvelteMarkdown from 'svelte-markdown';
 
-	let editMode = false;
-	let content = '# Hello\n1. one\n2. two';
+	let editMode = $state(false);
+	let content = $state('# Hello\n1. one\n2. two');
 
 	function toggleEditMode() {
 		editMode = !editMode;
@@ -12,7 +12,7 @@
 </script>
 
 <div class="flex justify-end">
-	<button class="btn-primary py-1" on:click={toggleEditMode}>
+	<button class="btn-primary py-1" onclick={toggleEditMode}>
 		{#if editMode}
 			Save
 		{:else}

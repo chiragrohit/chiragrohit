@@ -1,8 +1,9 @@
 <script>
 	import ThemeSwitch from './ThemeSwitch.svelte';
-	let isOpen = false;
+	let isOpen = $state(false);
 
-	export let navbarItems;
+	/** @type {{navbarItems: any}} */
+	let { navbarItems } = $props();
 </script>
 
 <nav class="p-4 text-[18px] font-semibold">
@@ -32,7 +33,7 @@
 
 			<!-- mobile button goes here -->
 			<div class="md:hidden flex items-center">
-				<button class="pr-4" on:click={() => (isOpen = !isOpen)}>
+				<button class="pr-4" onclick={() => (isOpen = !isOpen)}>
 					<svg
 						class="w-6 h-6"
 						fill="none"

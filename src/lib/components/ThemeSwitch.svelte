@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 
-	let darkMode = true;
+	let darkMode = $state(true);
 
 	function handleSwitchDarkMode() {
 		darkMode = !darkMode;
@@ -28,8 +28,8 @@
 </script>
 
 <div class="pr-4 md:pr-0 flex items-center">
-	<input checked={darkMode} on:click={handleSwitchDarkMode} type="checkbox" id="theme-toggle" />
-	<label for="theme-toggle" />
+	<input checked={darkMode} onclick={handleSwitchDarkMode} type="checkbox" id="theme-toggle" />
+	<label for="theme-toggle"></label>
 </div>
 
 <style lang="postcss">

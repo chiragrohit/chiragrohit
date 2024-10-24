@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
-	export let data;
+	interface Props {
+		data: any;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>
@@ -22,7 +26,7 @@
 				class="flex flex-col items-center text-center h-32 w-32 p-2 bg-yellow-300 dark:bg-slate-800 hover:bg-yellow-400 dark:hover:bg-slate-700"
 			>
 				<p>Sveltekit</p>
-				<img src="https://kit.svelte.dev/favicon.png" alt="logo" class="w-[75%] h-[75%]" />
+				<img src="https://raw.githubusercontent.com/sveltejs/branding/refs/heads/master/svelte-logo.svg" alt="logo" class="w-[75%] h-[75%]" />
 			</div>
 		</div>
 	</div>

@@ -1,20 +1,25 @@
 <script>
+	import { run } from 'svelte/legacy';
+
 	import { onMount } from 'svelte';
 	import { Chart } from 'chart.js/auto';
 
-	export let filename = '';
-	export let chartTitle = 'Bar Chart';
-	export let xAxisLabel = 'X Axis';
-	export let yAxisLabel = 'Y Axis';
+	/** @type {{filename?: string, chartTitle?: string, xAxisLabel?: string, yAxisLabel?: string}} */
+	let {
+		filename = '',
+		chartTitle = 'Bar Chart',
+		xAxisLabel = 'X Axis',
+		yAxisLabel = 'Y Axis'
+	} = $props();
 
 	let chart;
-	let chartElement;
+	let chartElement = $state();
 	let csvData = '';
-	let parsedData = [];
+	let parsedData = $state([]);
 	let minRange = 0;
-	let maxRange = 100;
+	let maxRange = $state(100);
 	let currentMin = 0;
-	let currentMax = 100;
+	let currentMax = $state(100);
 
 	function parseCSV(csv) {
 		const lines = csv.split('\n').filter((line) => line.trim() !== '');
@@ -132,9 +137,11 @@
 	});
 
 	// Update the chart when the data or the slider range changes
-	$: if (currentMin !== undefined && currentMax !== undefined) {
-		handleRangeChange();
-	}
+	run(() => {
+		if (currentMin !== undefined && currentMax !== undefined) {
+			handleRangeChange();
+		}
+	});
 </script>
 
 <!-- Chart and slider -->
@@ -150,7 +157,7 @@
 			min={minRange}
 			max={maxRange}
 			bind:value={currentMax}
-			on:input={handleRangeChange}
+			oninput={handleRangeChange}
 		/>
 	</div>
 

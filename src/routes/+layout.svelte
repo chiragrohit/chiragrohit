@@ -4,7 +4,8 @@
 	import { fade } from 'svelte/transition';
 	import * as config from '$lib/config';
 
-	export let data;
+	/** @type {{data: any, children?: import('svelte').Snippet}} */
+	let { data, children } = $props();
 </script>
 
 <svelte:head>
@@ -20,6 +21,6 @@
 <Navbar navbarItems={data.navbarItems} />
 {#key data.url}
 	<div class="overflow-auto p-4" in:fade>
-		<slot />
+		{@render children?.()}
 	</div>
 {/key}

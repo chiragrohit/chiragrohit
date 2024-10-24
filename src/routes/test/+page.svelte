@@ -1,8 +1,8 @@
 <script>
-	let message = '';
-	let user = '';
-	let allUsers = '';
-	let modalRes = '';
+	let message = $state('');
+	let user = $state('');
+	let allUsers = $state('');
+	let modalRes = $state('');
 
 	const fetchData = async () => {
 		try {
@@ -49,7 +49,7 @@
 </div>
 <div class="p-4 flex flex-col">
 	<div>
-		<button on:click={fetchData} class="btn-primary">Click to get msg</button>
+		<button onclick={fetchData} class="btn-primary">Click to get msg</button>
 		{#if message}
 			<p>{message}</p>
 		{:else}
@@ -57,7 +57,7 @@
 		{/if}
 	</div>
 	<div>
-		<button on:click={() => fetchById(2)} class="btn-primary">Click to get userById</button>
+		<button onclick={() => fetchById(2)} class="btn-primary">Click to get userById</button>
 		{#if user}
 			<p>{user.email}</p>
 		{:else}
@@ -65,7 +65,7 @@
 		{/if}
 	</div>
 	<div>
-		<button on:click={fetchUser} class="btn-primary">Click to get all Users</button>
+		<button onclick={fetchUser} class="btn-primary">Click to get all Users</button>
 		{#if allUsers}
 			<div class="flex flex-col space-y-4 mt-2">
 				{#each allUsers as user}
@@ -82,7 +82,7 @@
 		{/if}
 	</div>
 	<div>
-		<button on:click={fetchDataFromModal} class="btn-primary">Protected users from Modal</button>
+		<button onclick={fetchDataFromModal} class="btn-primary">Protected users from Modal</button>
 		{#if modalRes}
 			<p>{modalRes}</p>
 		{:else}

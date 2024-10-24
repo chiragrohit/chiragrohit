@@ -11,8 +11,8 @@
 </svelte:head>
 
 <div class="flex justify-between text-white pl-2 pr-2 pb-2">
-	<button on:click={sidebar.toggleLeft} class="btn-primary py-1">Left</button>
-	<button on:click={sidebar.toggleRight} class="btn-primary py-1">Right</button>
+	<button onclick={sidebar.toggleLeft} class="btn-primary py-1">Left</button>
+	<button onclick={sidebar.toggleRight} class="btn-primary py-1">Right</button>
 </div>
 
 <div class="flex h-screen overflow-hidden">

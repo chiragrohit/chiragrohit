@@ -2,9 +2,8 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { Chart } from 'chart.js/auto';
 
-	export let labels = [];
-	export let data = [];
-	export let title = 'Bar Chart';
+	/** @type {{labels?: any, data?: any, title?: string}} */
+	let { labels = [], data = [], title = 'Bar Chart' } = $props();
 
 	let chart;
 	let canvasId = Math.random().toString(36).substring(2, 15); // Unique ID for each chart
