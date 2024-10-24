@@ -13,6 +13,13 @@
 	<title>{data.meta.title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.5.0/prism-atom-dark.min.css"
+		integrity="sha512-GZPS1oCebjx8g/ZkrTTvWirW+4wDkzIsilUQPXcZzuDpDzoH5brM2AojiFjo6ObIWeM68ZDostvdjaS9MNYCTg=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+	/>
 </svelte:head>
 
 <article class="max-w-screen-md mx-auto">

@@ -1,7 +1,6 @@
 ---
 title: LLM in DataFrame
 description: In this blog post, we will explore how to interact with a Large Language Model (LLM) to generate responses based on prompts stored in a Pandas DataFrame.
-
 date: '2024-10-05'
 categories:
   - langchain

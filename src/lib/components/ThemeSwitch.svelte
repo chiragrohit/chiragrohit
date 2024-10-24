@@ -1,29 +1,18 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 
-	let darkMode = $state(true);
+	let darkMode = true; // Default to true until browser environment is checked
 
 	function handleSwitchDarkMode() {
 		darkMode = !darkMode;
-
 		localStorage.setItem('theme', darkMode ? 'dark' : 'light');
-
-		darkMode
-			? document.documentElement.classList.add('dark')
-			: document.documentElement.classList.remove('dark');
+		document.documentElement.classList.toggle('dark', darkMode);
 	}
 
 	if (browser) {
-		if (
+		darkMode =
 			localStorage.theme === 'dark' ||
-			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-		) {
-			document.documentElement.classList.add('dark');
-			darkMode = true;
-		} else {
-			document.documentElement.classList.remove('dark');
-			darkMode = false;
-		}
+			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
 	}
 </script>
 
