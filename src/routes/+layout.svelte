@@ -1,4 +1,5 @@
 <script>
+    import { inject } from '@vercel/analytics'
 	import '../app.css';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import { fade } from 'svelte/transition';
