@@ -10,7 +10,7 @@ export async function GET({ url }: { url: URL }) {
 
     // Fuse.js configuration for fuzzy searching the candidates' names
     const fuseOptions = {
-        keys: ["Candidate"], // Search within the "Candidate" field
+        keys: ["Candidate", "Constituency Name"], // Search within the "Candidate" field
         threshold: 0.3, // Adjust the threshold for fuzziness (lower is more precise)
     };
 
