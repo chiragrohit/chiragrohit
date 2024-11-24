@@ -1,7 +1,9 @@
 <script lang="ts">
 	let searchQuery = $state('');
 	let searchResults = $state([]);
+	let constituencies = $state([]);
 	let selectedConstituency = $state(null); // To hold the selected constituency details
+	let selectedConstituencyNo = $state('');
 	let timer: NodeJS.Timeout;
 
 	// Debounced API call for candidate search
@@ -24,27 +26,60 @@
 		}, 1000); // 1000ms debounce time
 	};
 
+	// Fetch constituencies list when the component mounts
+	const fetchConstituencies = async () => {
+		const response = await fetch('/api/elections/constituencies');
+		if (response.ok) {
+			constituencies = await response.json();
+			// Sort constituencies by name
+			constituencies.sort((a, b) => {
+				const nameA = a['Constituency Name'].toLowerCase();
+				const nameB = b['Constituency Name'].toLowerCase();
+				if (nameA < nameB) return -1;
+				if (nameA > nameB) return 1;
+				return 0;
+			});
+		} else {
+			console.error('Failed to fetch constituencies');
+		}
+	};
+
 	// Fetch constituency details when a candidate is clicked
 	const fetchConstituencyDetails = async (constituencyNo: string) => {
 		const response = await fetch(`/api/elections/constituency/${constituencyNo}`);
 		if (response.ok) {
 			const data = await response.json();
 			selectedConstituency = data; // Update the selected constituency details
+			searchResults = [];
+			searchQuery = '';
+			selectedConstituencyNo = constituencyNo;
 		} else {
 			console.error('Failed to fetch constituency details');
 		}
 	};
 
-	const getMaxVotesCandidate = () => {
-		if (!selectedConstituency?.Candidates) return null;
-		return Math.max(...selectedConstituency.Candidates.map((c) => c['Total Votes']));
-	};
+	$effect(() => {
+		fetchConstituencies();
+	});
 </script>
 
 <main class="flex flex-col md:flex-row gap-8">
 	<!-- Left Side (1/4 of the space) -->
-	<div class="w-full sm:w-1/4 p-2 max-h-[80vh] overflow-y-auto mt-4">
+	<div class="w-full md:w-1/4 p-2 max-h-[80vh] overflow-y-auto mt-4">
 		<h1 class="text-2xl font-semibold mb-6">Candidate Search</h1>
+		<!-- Constituency Dropdown -->
+		<select
+			class="w-full p-3 mb-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:focus:ring-white"
+			bind:value={selectedConstituencyNo}
+			onchange={() => fetchConstituencyDetails(selectedConstituencyNo)}
+		>
+			<option value="" disabled selected>Select Constituency</option>
+			{#each constituencies as constituency}
+				<option value={constituency['Constituency No']}>
+					{constituency['Constituency Name']} - {constituency['Constituency No']}
+				</option>
+			{/each}
+		</select>
 
 		<!-- Search Input -->
 		<input
@@ -132,30 +167,34 @@
 							<tbody>
 								{#each selectedConstituency.Candidates as candidate, index}
 									<tr
-										class="hover:bg-yellow-100 dark:hover:bg-slate-600"
-										class:bg-yellow-300={candidate['Total Votes'] === getMaxVotesCandidate()}
-										class:dark:bg-gray-600={candidate['Total Votes'] === getMaxVotesCandidate()}
+										class="hover:bg-yellow-100 dark:hover:bg-slate-600 text-gray-800 dark:text-gray-100"
 									>
-										<td class="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">{index + 1}</td>
+										<td class="px-6 py-4 text-sm">{index + 1}</td>
 										<!-- Sr No -->
-										<td class="px-6 py-4 text-sm text-gray-800 dark:text-gray-100"
-											>{candidate.Candidate}</td
-										>
-										<td class="px-6 py-4 text-sm text-gray-600 dark:text-gray-300"
-											>{candidate.Party}</td
-										>
-										<td class="px-6 py-4 text-sm text-gray-600 dark:text-gray-300"
-											>{candidate['EVM Votes'].toLocaleString()}</td
-										>
-										<td class="px-6 py-4 text-sm text-gray-600 dark:text-gray-300"
-											>{candidate['Postal Votes'].toLocaleString()}</td
-										>
-										<td class="px-6 py-4 text-sm text-gray-600 dark:text-gray-300"
-											>{candidate['Total Votes'].toLocaleString()}</td
-										>
-										<td class="px-6 py-4 text-sm text-gray-600 dark:text-gray-300"
-											>{candidate['Percentage of Votes']}%</td
-										>
+										<td class="px-6 py-4 text-sm">{candidate.Candidate}</td>
+										<td class="px-6 py-4 text-sm">{candidate.Party}</td>
+										<td class="px-6 py-4 text-sm">{candidate['EVM Votes'].toLocaleString()}</td>
+										<td class="px-6 py-4 text-sm">{candidate['Postal Votes'].toLocaleString()}</td>
+										<td class="px-6 py-4 text-sm">{candidate['Total Votes'].toLocaleString()}</td>
+										<td class="px-6 py-4 text-sm">{candidate['Percentage of Votes']}%</td>
+									</tr>
+									<tr>
+										<td colspan="7" class="px-6 py-2">
+											<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full">
+												<div
+													class="h-2 rounded-full"
+													style="
+                                                        background: linear-gradient(to right, 
+                                                            #00b300 {candidate[
+														'Percentage of Votes'
+													]}%, 
+                                                            transparent {candidate[
+														'Percentage of Votes'
+													]}%);
+                                                        "
+												></div>
+											</div>
+										</td>
 									</tr>
 								{/each}
 							</tbody>

@@ -9,5 +9,8 @@ export async function GET({ params }: { params: { no: string } }) {
         throw error(404, "Constituency not found");
     }
 
+    // Sort the candidates in descending order of Total Votes
+    constituency.Candidates.sort((a, b) => b["Total Votes"] - a["Total Votes"]);
+
     return json(constituency);
 }
