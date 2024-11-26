@@ -2,135 +2,159 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* width */
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
+::-webkit-scrollbar {
+    width: 10px;
+}
 
-    /* Track */
-    ::-webkit-scrollbar-track {
-        background: transparent; 
-    }
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
 
-    ::-webkit-scrollbar-thumb {
-        background: #E3B425; 
-    }
+::-webkit-scrollbar-thumb {
+    background: #e3b425;
+}
 
-    ::-webkit-scrollbar-thumb:hover {
-        background: #CD8F08; 
-    }
-    
-    .dark ::-webkit-scrollbar-thumb {
-        background: #1F2937;
-    }
-    
-    .dark ::-webkit-scrollbar-thumb:hover {
-        background: #bbb6b6; 
-    }
+::-webkit-scrollbar-thumb:hover {
+    background: #cd8f08;
+}
 
+.dark ::-webkit-scrollbar-thumb {
+    background: #1f2937;
+}
 
-    /* CODEMIRRO GUTTERS */
-    .ͼ2 .cm-gutters {
-        background-color: #ffffff00;
-        border-right: 1px solid #ddd;
-    }
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #bbb6b6;
+}
 
-    .ͼ2 .cm-activeLine {
-        background-color: #808da043;
-    }
+/* CODEMIRRO GUTTERS */
+.ͼ2 .cm-gutters {
+    background-color: #ffffff00;
+    border-right: 1px solid #ddd;
+}
 
-    .ͼ2 .cm-activeLineGutter {
-        background-color: #707e913a;
-    }
+.ͼ2 .cm-activeLine {
+    background-color: #808da043;
+}
 
-    .prose{
-        max-width: 100%;
-    }
+.ͼ2 .cm-activeLineGutter {
+    background-color: #707e913a;
+}
 
-    
-  @layer components {
+.prose {
+    max-width: 100%;
+}
 
+@layer components {
     body {
-        font-family: 'Trebuchet MS', sans-serif;
+        font-family: "Trebuchet MS", sans-serif;
         @apply bg-yellow-100 text-yellow-950 dark:bg-slate-950 dark:text-white;
-        
     }
 
-
-    .btn-primary{
-        @apply bg-yellow-200 hover:bg-yellow-400 dark:bg-slate-800 dark:text-slate-100 text-black px-6 py-2 border-2 border-yellow-400 dark:border-slate-400 shadow-md  dark:hover:text-black dark:hover:bg-slate-400 transition-all duration-300 ease-in-out;
+    .btn-primary {
+        @apply bg-yellow-200 hover:bg-yellow-400 dark:bg-slate-800
+            dark:text-slate-100 text-black px-6 py-2 border-2 border-yellow-400
+            dark:border-slate-400 shadow-md dark:hover:text-black
+            dark:hover:bg-slate-400 transition-all duration-300 ease-in-out;
     }
 
+    /* INPUT */
+    .input {
+        @apply w-full px-4 py-3 rounded-lg border border-gray-300
+            dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-800
+            dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500
+            focus:ring-2 focus:ring-slate-500 focus:outline-none transition-all
+            duration-300;
+    }
+
+    .input:focus {
+        @apply shadow-md;
+    }
+
+    .input:disabled {
+        @apply bg-gray-200 dark:bg-slate-700 text-gray-400 dark:text-gray-500
+            cursor-not-allowed;
+    }
 
     /* CARD */
-    
-    .card{
-        @apply w-full md:max-w-[30%] bg-yellow-200 hover:bg-yellow-300 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 p-4 mt-4 md:mt-0 shadow-md;
+    .card {
+        @apply w-full md:max-w-[30%] bg-gradient-to-tl from-yellow-200
+            to-yellow-100 dark:from-slate-800 dark:to-slate-700
+            dark:text-slate-200 p-6 mt-4 md:mt-0 shadow-lg rounded-xl
+            transition-transform transform hover:scale-105;
     }
 
-    .card .card-body{
-        @apply flex flex-col justify-between gap-2 h-full text-center; 
+    .card .card-body {
+        @apply flex flex-col justify-between gap-4 h-full text-center;
     }
 
-    .card-body h1{
-        @apply text-2xl font-bold;
+    .card-body h1 {
+        @apply text-2xl font-bold text-gray-800 dark:text-gray-100;
     }
 
-    .card-body p{
-        @apply text-lg;
+    .card-body p {
+        @apply text-base text-gray-600 dark:text-gray-300;
     }
 
-    .card-body button, .card-body a{
-        @apply btn-primary w-full
+    .card-body button,
+    .card-body a {
+        @apply btn-primary w-full bg-yellow-300 hover:bg-yellow-400 rounded-md
+            shadow-md transition;
     }
-
 
     /* BLOG */
-
-    .posts{
-        @apply bg-yellow-200 dark:bg-slate-800 hover:bg-yellow-300 dark:hover:bg-slate-700 p-4 shadow-md
+    .posts {
+        @apply bg-gradient-to-tl from-yellow-200 to-yellow-100
+            dark:from-slate-800 dark:to-slate-700 hover:from-yellow-300
+            hover:to-yellow-200 dark:hover:from-slate-700
+            dark:hover:to-slate-600 p-6 shadow-lg rounded-lg
+            transition-transform transform hover:scale-105;
     }
 
-    .post-title{
-        @apply text-xl capitalize font-bold
+    .post-title {
+        @apply text-2xl capitalize font-bold text-gray-800 dark:text-gray-100
+            transition-colors duration-300;
     }
 
-    .post-date{
-        @apply text-sm text-gray-600 dark:text-gray-400
+    .post-date {
+        @apply text-sm text-gray-500 dark:text-gray-400 italic;
     }
 
-    .post-description{
-        @apply mt-2 text-gray-600 dark:text-gray-400
+    .post-description {
+        @apply mt-4 text-gray-700 dark:text-gray-300;
     }
 
-    .post-categories{
-        @apply text-sm text-gray-600 dark:text-gray-400 bg-yellow-400 w-fit px-2 py-1 rounded-md dark:bg-slate-600
+    .post-categories {
+        @apply text-sm text-gray-700 dark:text-gray-300 bg-yellow-400
+            dark:bg-slate-600 px-3 py-1 rounded-full inline-block shadow-sm
+            transition-all transform hover:scale-110;
     }
 
     /* DARK THEME */
-    
+
     #theme-toggle {
         @apply invisible;
     }
-  
+
     #theme-toggle + label {
-        @apply inline-block cursor-pointer h-8 w-8 rounded-full duration-300 content-[''];
+        @apply inline-block cursor-pointer h-8 w-8 rounded-full duration-300
+            content-[""];
     }
-  
+
     @media (max-width: 767px) {
         #theme-toggle + label {
-            @apply inline-block cursor-pointer h-6 w-6 rounded-full duration-300 content-[''];
+            @apply inline-block cursor-pointer h-6 w-6 rounded-full duration-300
+                content-[""];
         }
     }
-  
+
     #theme-toggle:not(:checked) + label {
         @apply bg-amber-400;
     }
-  
+
     #theme-toggle:checked + label {
         @apply bg-transparent;
         box-shadow: inset -8px -8px 1px 1px #ddd;
     }
-  }
-
+}

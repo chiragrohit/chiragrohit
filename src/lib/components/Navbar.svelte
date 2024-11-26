@@ -53,13 +53,15 @@
 	</div>
 
 	<!-- mobile menu -->
-	<div class={`md:hidden bg-yellow-200 dark:bg-slate-900 pt-4 ${isOpen ? 'block' : 'hidden'}`}>
+	<div
+		class={`md:hidden bg-gradient-to-t from-yellow-400 to-transparent dark:bg-gradient-to-t dark:from-slate-600 dark:to-transparent ${isOpen ? 'block' : 'hidden'}`}
+	>
 		{#each Object.entries(navbarItems) as [label, route]}
 			<a
 				role="button"
 				href={route}
 				class="block py-1 px-4 hover:bg-yellow-300 hover:text-black dark:hover:bg-slate-200"
-				>{label}</a
+				onclick={() => (isOpen = !isOpen)}>{label}</a
 			>
 		{/each}
 	</div>

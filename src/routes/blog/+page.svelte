@@ -30,12 +30,7 @@
 
 	<!-- Search Bar -->
 	<div class="flex gap-1">
-		<input
-			class="w-full rounded-md p-4 border border-yellow-800 bg-yellow-100 dark:bg-slate-800 dark:border-slate-600 focus:outline-yellow-400 dark:focus:outline-slate-400"
-			type="text"
-			placeholder="Search..."
-			bind:value={searchTerm}
-		/>
+		<input class="input" type="text" placeholder="Search..." bind:value={searchTerm} />
 		<!-- Clear input field -->
 		{#if searchTerm}
 			<button

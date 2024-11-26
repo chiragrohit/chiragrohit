@@ -63,9 +63,10 @@
 	});
 </script>
 
-<main class="flex flex-col md:flex-row gap-8">
+<h1 class="text-3xl text-center">Maharashtra Assembly 2024 Constituency Details</h1>
+<main class="flex flex-col lg:flex-row gap-8">
 	<!-- Left Side (1/4 of the space) -->
-	<div class="w-full md:w-1/4 p-2 max-h-[80vh] overflow-y-auto mt-4">
+	<div class="w-full lg:w-1/4 p-2 max-h-[80vh] overflow-y-auto mt-4">
 		<h1 class="text-2xl font-semibold mb-6">Candidate Search</h1>
 		<!-- Constituency Dropdown -->
 		<select
@@ -85,12 +86,12 @@
 		<input
 			bind:value={searchQuery}
 			placeholder="Search for a candidate by name..."
-			class="w-full p-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:focus:ring-white"
+			class="input"
 			oninput={debounce}
 		/>
 
 		<!-- Search Results -->
-		<div class="">
+		<div class="max-h-[50vh] overflow-y-auto">
 			{#if searchResults.length > 0}
 				<ul class="space-y-4">
 					{#each searchResults as result}
@@ -119,8 +120,7 @@
 	</div>
 
 	<!-- Right Side (3/4 of the space) -->
-	<div class="mt-4 w-full sm:w-3/4">
-		<h1 class="text-3xl text-center">Maharashtra Assembly 2024 Constituency Details</h1>
+	<div class="mt-4 w-full lg:w-3/4">
 		{#if selectedConstituency}
 			<!-- Display selected constituency details -->
 			<div class="mt-6">

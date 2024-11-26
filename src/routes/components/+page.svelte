@@ -7,14 +7,23 @@
 	<diV class="flex flex-col space-y-4">
 		<!-- ################################################# BUTTON Component -->
 		<div>
-			<p class="text-xl">Button</p>
+			<p class="text-xl">BUTTON</p>
 			<div>
 				<button class="btn-primary">btn-primary</button>
 			</div>
 		</div>
 
+		<!-- ################################################# INPUT Component -->
+		<div>
+			<p class="text-xl">INPUT</p>
+			<div>
+				<input class="input" />
+			</div>
+		</div>
+
 		<!-- ################################################# POST Component -->
 		<div>
+			<p class="text-xl">POST</p>
 			<ul class="flex flex-col gap-2 max-w-screen-md mx-auto">
 				<li class="posts">
 					<a href="#">
@@ -31,7 +40,7 @@
 		</div>
 
 		<!-- ################################################# CARD Component -->
-		<p class="text-xl">Card</p>
+		<p class="text-xl">CARD</p>
 		<div class="flex flex-wrap justify-between">
 			<div class="card">
 				<div class="card-body">
