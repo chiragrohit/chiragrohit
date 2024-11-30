@@ -12,7 +12,7 @@
 			const size = Math.floor(Math.random() * 100) + 50; // Random size between 50px and 150px
 			const x = Math.random() * window.innerWidth;
 			const y = Math.random() * window.innerHeight;
-			const color = `hsla(${Math.random() * 360}, 70%, 60%, 0.3)`; // Semi-transparent color
+			const color = `hsla(${Math.random() * 360}, 70%, 60%, 0.35)`; // Semi-transparent color
 
 			// Create a circle and store its reference
 			const circle = draw.circle(size).fill(color).move(x, y);
