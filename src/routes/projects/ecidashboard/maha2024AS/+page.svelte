@@ -1,12 +1,12 @@
 <script lang="ts">
+	import type { PageData } from './$types';
+	let { data }: { data: PageData } = $props();
+
 	let searchQuery = $state('');
 	let searchResults = $state([]);
-	let constituencies = $state([]);
-	let selectedConstituency = $state(null); // To hold the selected constituency details
+	let selectedConstituency = $state(null);
 	let selectedConstituencyNo = $state('');
 	let timer: NodeJS.Timeout;
-	let partyStats = $state([]);
-	let totalVotes = $state(0);
 
 	// Debounced API call for candidate search
 	const debounce = (e: Event) => {
@@ -25,25 +25,7 @@
 			} else {
 				console.error('Failed to fetch candidates');
 			}
-		}, 1000); // 1000ms debounce time
-	};
-
-	// Fetch constituencies list when the component mounts
-	const fetchConstituencies = async () => {
-		const response = await fetch('/api/elections/constituencies');
-		if (response.ok) {
-			constituencies = await response.json();
-			// Sort constituencies by name
-			constituencies.sort((a, b) => {
-				const nameA = a['Constituency Name'].toLowerCase();
-				const nameB = b['Constituency Name'].toLowerCase();
-				if (nameA < nameB) return -1;
-				if (nameA > nameB) return 1;
-				return 0;
-			});
-		} else {
-			console.error('Failed to fetch constituencies');
-		}
+		}, 500); // 1000ms debounce time
 	};
 
 	// Fetch constituency details when a candidate is clicked
@@ -60,21 +42,6 @@
 		}
 	};
 
-	// Fetch party stats and vote share
-	const fetchPartyStats = async () => {
-		const response = await fetch('/api/elections/party-stats');
-		if (response.ok) {
-			const data = await response.json();
-			totalVotes = data.totalVotes;
-			partyStats = Object.entries(data.partyStats).map(([party, stats]) => ({
-				party,
-				...stats
-			}));
-		} else {
-			console.error('Failed to fetch party stats');
-		}
-	};
-
 	let columnVisibility = $state({
 		'EVM Votes': true,
 		'Postal Votes': true
@@ -83,22 +50,17 @@
 	const toggleColumn = (column) => {
 		columnVisibility[column] = !columnVisibility[column];
 	};
-
-	$effect(() => {
-		fetchConstituencies();
-		fetchPartyStats();
-	});
 </script>
 
 <main class="max-w-screen-lg mx-auto">
 	<h1 class="text-3xl text-center">Maharashtra Assembly 2024 Constituency Details</h1>
-	<section class="mt-10 dark:bg-slate-800 p-2 rounded-md">
+	<section class="mt-10">
 		<!-- Party Vote Share -->
 		<h1 class="text-3xl font-bold mb-4">Party-Wise Vote Share</h1>
 
 		<!-- Party Stats Section -->
-		<div class="mt-10 max-w-4xl mx-auto">
-			{#if partyStats.length > 0}
+		<div class="mt-10">
+			{#if data.partyStats.length > 0}
 				<div class="overflow-x-auto shadow-lg rounded-lg mt-6 max-h-96 overflow-y-auto">
 					<table class="min-w-full bg-white dark:bg-slate-800 rounded-lg">
 						<thead class="bg-yellow-400 dark:bg-slate-700 sticky top-0">
@@ -106,7 +68,7 @@
 								<th
 									class="px-6 py-3 text-left text-sm font-semibold text-gray-700 dark:text-gray-100"
 								>
-									Index
+									Sr No
 								</th>
 								<th
 									class="px-6 py-3 text-left text-sm font-semibold text-gray-700 dark:text-gray-100"
@@ -126,7 +88,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{#each partyStats as stat, index}
+							{#each data.partyStats as stat, index}
 								<tr class="hover:bg-yellow-100 dark:hover:bg-slate-600">
 									<td class="px-6 py-4 text-sm">{index + 1}</td>
 									<!-- Display index -->
@@ -154,7 +116,7 @@
 		</div>
 	</section>
 
-	<section class="mt-10 dark:bg-slate-800 p-2 rounded-md">
+	<section class="mt-10">
 		<h1 class="text-3xl font-bold mb-4">Constituency Details</h1>
 
 		<div class=" p-2 max-h-[80vh] overflow-y-auto mt-4">
@@ -165,7 +127,7 @@
 				onchange={() => fetchConstituencyDetails(selectedConstituencyNo)}
 			>
 				<option value="" disabled selected>Select Constituency</option>
-				{#each constituencies as constituency}
+				{#each data.constituencies as constituency}
 					<option value={constituency['Constituency No']}>
 						{constituency['Constituency Name']} - {constituency['Constituency No']}
 					</option>
