@@ -6,7 +6,7 @@
 	let { navbarItems } = $props();
 </script>
 
-<nav class="p-4 text-[18px] font-semibold">
+<nav class="fixed top-0 w-full p-4 text-[18px] font-semibold bg-yellow-500 dark:bg-indigo-900">
 	<div class="mx-auto max-w-screen-xl">
 		<div class="flex justify-between">
 			<div class="flex justify-between items-center w-full">
@@ -53,9 +53,7 @@
 	</div>
 
 	<!-- mobile menu -->
-	<div
-		class={`md:hidden bg-gradient-to-t from-yellow-400 to-transparent dark:bg-gradient-to-t dark:from-indigo-600 dark:to-transparent ${isOpen ? 'block' : 'hidden'}`}
-	>
+	<div class={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
 		{#each Object.entries(navbarItems) as [label, route]}
 			<a
 				role="button"

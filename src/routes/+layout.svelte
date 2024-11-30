@@ -21,7 +21,7 @@
 
 <Navbar navbarItems={data.navbarItems} />
 {#key data.url}
-	<div class="overflow-auto p-4" in:fade>
+	<div class="overflow-auto p-4 mt-16" in:fade>
 		{@render children?.()}
 	</div>
 {/key}

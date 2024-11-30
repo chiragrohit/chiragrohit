@@ -58,9 +58,7 @@
 
 <div class="container mx-auto px-4 py-8 dark:text-white">
 	<!-- Hero Section -->
-	<section
-		class="min-h-[70vh] flex flex-col justify-center text-center mb-16 rounded-t-full bg-gradient-to-b from-yellow-200 to-yellow-400 dark:from-indigo-700 dark:to-indigo-950"
-	>
+	<section class="min-h-[70vh] flex flex-col justify-center text-center mb-16">
 		<h1 class="text-6xl md:text-8xl font-bold mb-9 text-black dark:text-white">Chirag Rohit</h1>
 
 		<div class="space-y-2">

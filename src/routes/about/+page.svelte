@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="mx-auto flex max-w-screen-lg flex-col rounded bg-yellow-300 dark:bg-indigo-800 md:flex-row"
+	class="mx-auto flex max-w-screen-lg flex-col rounded bg-yellow-300 dark:bg-indigo-800 md:flex-row mt-16"
 >
 	<!-- Aside for Photo and Socials -->
 	<aside class="m-4 flex flex-col items-center rounded md:w-1/4">
