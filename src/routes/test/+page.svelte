@@ -69,7 +69,7 @@
 		{#if allUsers}
 			<div class="flex flex-col space-y-4 mt-2">
 				{#each allUsers as user}
-					<div class="bg-slate-200 p-2">
+					<div class="bg-indigo-200 p-2">
 						<p>ID: {user.id}</p>
 						<p>Username: {user.username}</p>
 						<p>Email: {user.email}</p>

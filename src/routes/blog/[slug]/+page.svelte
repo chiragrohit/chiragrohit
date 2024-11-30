@@ -25,7 +25,7 @@
 <article class="max-w-screen-md mx-auto">
 	<a class="btn-primary" href="/blog">&larr; Blogs</a>
 	<!-- Article Heading -->
-	<div class="bg-yellow-300 dark:bg-slate-800 p-4 rounded-md mt-8">
+	<div class="bg-yellow-300 dark:bg-indigo-800 p-4 rounded-md mt-8">
 		<h1 class="text-3xl">{data.meta.title}</h1>
 		<p class="text-sm text-gray-600 dark:text-gray-400">
 			Published on {formatDate(data.meta.date)}
@@ -42,7 +42,7 @@
 	<!-- Post -->
 
 	<div
-		class="prose prose-pre:bg-slate-800 prose-blockquote:bg-yellow-300 prose-blockquote:dark:bg-slate-800 dark:prose-invert p-4"
+		class="prose prose-pre:bg-indigo-800 prose-blockquote:bg-yellow-300 prose-blockquote:dark:bg-indigo-800 dark:prose-invert p-4"
 	>
 		<data.content />
 	</div>

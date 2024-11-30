@@ -13,15 +13,15 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #e3b425;
+    background: #131211;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #cd8f08;
+    background: #6b4a02;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-    background: #1f2937;
+    background: #ffffffce;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
@@ -49,67 +49,103 @@
 @layer components {
     body {
         font-family: "Trebuchet MS", sans-serif;
-        @apply bg-yellow-100 text-yellow-950 dark:bg-slate-950 dark:text-white;
+        @apply bg-yellow-400 dark:bg-indigo-950 dark:text-white;
     }
 
     .btn-primary {
-        @apply bg-yellow-200 hover:bg-yellow-400 dark:bg-slate-800
-            dark:text-slate-100 text-black px-6 py-2 border-2 border-yellow-400
-            dark:border-slate-400 shadow-md dark:hover:text-black
-            dark:hover:bg-slate-400 transition-all duration-300 ease-in-out;
+        @apply text-black hover:text-white dark:text-indigo-100 bg-yellow-300
+            hover:bg-yellow-900 dark:bg-indigo-800 border-2 border-yellow-900
+            dark:border-indigo-400 px-6 py-2 shadow-md dark:hover:text-black
+            dark:hover:bg-indigo-400 transition-all duration-300 ease-in-out;
     }
 
     /* INPUT */
     .input {
-        @apply w-full px-4 py-3 rounded-lg border border-gray-300
-            dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-800
+        @apply w-full px-4 py-3 rounded-lg border border-yellow-800
+            dark:border-indigo-400 bg-white dark:bg-indigo-900 text-gray-800
             dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500
-            focus:ring-2 focus:ring-slate-500 focus:outline-none transition-all
-            duration-300;
-    }
-
-    .input:focus {
-        @apply shadow-md;
+            focus:ring-2 focus:ring-yellow-800 dark:focus:ring-indigo-400
+            focus:outline-none transition-all duration-300;
     }
 
     .input:disabled {
-        @apply bg-gray-200 dark:bg-slate-700 text-gray-400 dark:text-gray-500
+        @apply bg-gray-200 dark:bg-indigo-700 text-gray-400 dark:text-gray-500
             cursor-not-allowed;
     }
 
-    /* CARD */
+    /* Base card styles */
     .card {
-        @apply w-full md:max-w-[30%] bg-gradient-to-tl from-yellow-200
-            to-yellow-100 dark:from-slate-800 dark:to-slate-700
-            dark:text-slate-200 p-6 mt-4 md:mt-0 shadow-lg rounded-xl
-            transition-transform transform hover:scale-105;
+        @apply w-full md:max-w-[30%] flex flex-col gap-4 max-w-[20rem]
+            min-w-[20rem];
     }
 
+    /* Card Body Styles */
     .card .card-body {
-        @apply flex flex-col justify-between gap-4 h-full text-center;
+        @apply flex flex-col justify-between gap-4 h-full;
     }
 
-    .card-body h1 {
-        @apply text-2xl font-bold text-gray-800 dark:text-gray-100;
+    .card .card-body h1 {
+        @apply text-xl font-semibold;
     }
 
-    .card-body p {
-        @apply text-base text-gray-600 dark:text-gray-300;
+    .card .card-body p {
+        @apply text-sm text-gray-200 dark:text-gray-300;
     }
 
-    .card-body button,
-    .card-body a {
-        @apply btn-primary w-full bg-yellow-300 hover:bg-yellow-400 rounded-md
-            shadow-md transition;
+    .card .card-body span {
+        @apply text-xs font-medium px-2 py-1 text-end;
+    }
+
+    /* Gen AI Card */
+    .card .gen-ai-card {
+        @apply bg-green-500 dark:bg-green-700 text-white p-6;
+    }
+
+    /* Data Science Card */
+    .card .data-science-card {
+        @apply bg-blue-500 dark:bg-blue-700 text-white p-6;
+    }
+
+    /* Web Dev Card */
+    .card .web-dev-card {
+        @apply bg-orange-500 dark:bg-orange-700 text-white p-6;
+    }
+
+    /* Default Card */
+    .card .default-card {
+        @apply bg-gray-400 dark:bg-gray-700 text-black dark:text-white p-6;
+    }
+
+    /* Button Styles */
+    .card-body .btn {
+        @apply py-2 px-4 rounded-md transition-all duration-300 text-white
+            text-center;
+    }
+
+    /* Gen AI Button */
+    .card-body .gen-ai-btn {
+        @apply bg-green-600 hover:bg-green-800;
+    }
+
+    /* Data Science Button */
+    .card-body .data-science-btn {
+        @apply bg-blue-600 hover:bg-blue-800;
+    }
+
+    /* Web Dev Button */
+    .card-body .web-dev-btn {
+        @apply bg-orange-600 hover:bg-orange-800;
+    }
+
+    /* Default Button */
+    .card-body .default-btn {
+        @apply bg-gray-600 hover:bg-gray-800;
     }
 
     /* BLOG */
     .posts {
-        @apply bg-gradient-to-tl from-yellow-200 to-yellow-100
-            dark:from-slate-800 dark:to-slate-700 hover:from-yellow-300
-            hover:to-yellow-200 dark:hover:from-slate-700
-            dark:hover:to-slate-600 p-6 shadow-lg rounded-lg
-            transition-transform transform hover:scale-105;
+        @apply p-6 bg-yellow-300 hover:bg-yellow-200 dark:bg-indigo-900
+            dark:hover:bg-indigo-800;
     }
 
     .post-title {
@@ -127,7 +163,7 @@
 
     .post-categories {
         @apply text-sm text-gray-700 dark:text-gray-300 bg-yellow-400
-            dark:bg-slate-600 px-3 py-1 rounded-full inline-block shadow-sm
+            dark:bg-indigo-600 px-3 py-1 rounded-full inline-block shadow-sm
             transition-all transform hover:scale-110;
     }
 

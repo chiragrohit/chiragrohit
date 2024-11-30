@@ -37,7 +37,7 @@
 	}
 
 	#theme-toggle:not(:checked) + label {
-		@apply bg-amber-400;
+		@apply bg-yellow-100;
 	}
 
 	#theme-toggle:checked + label {

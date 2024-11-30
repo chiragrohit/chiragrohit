@@ -62,8 +62,8 @@
 		<div class="mt-10">
 			{#if data.partyStats.length > 0}
 				<div class="overflow-x-auto shadow-lg rounded-lg mt-6 max-h-96 overflow-y-auto">
-					<table class="min-w-full bg-white dark:bg-slate-800 rounded-lg">
-						<thead class="bg-yellow-400 dark:bg-slate-700 sticky top-0">
+					<table class="min-w-full bg-white dark:bg-indigo-800 rounded-lg">
+						<thead class="bg-yellow-400 dark:bg-indigo-700 sticky top-0">
 							<tr>
 								<th
 									class="px-6 py-3 text-left text-sm font-semibold text-gray-700 dark:text-gray-100"
@@ -89,7 +89,7 @@
 						</thead>
 						<tbody>
 							{#each data.partyStats as stat, index}
-								<tr class="hover:bg-yellow-100 dark:hover:bg-slate-600">
+								<tr class="hover:bg-yellow-100 dark:hover:bg-indigo-600">
 									<td class="px-6 py-4 text-sm">{index + 1}</td>
 									<!-- Display index -->
 									<td class="px-6 py-4 text-sm">{stat.party}</td>
@@ -150,7 +150,7 @@
 							<!-- On Click, fetch constituency details -->
 							<a href="#" onclick={() => fetchConstituencyDetails(result['Constituency No'])}>
 								<li
-									class="rounded-lg shadow-md mt-2 bg-yellow-200 hover:bg-yellow-300 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 p-4 transition-all"
+									class="rounded-lg shadow-md mt-2 bg-yellow-200 hover:bg-yellow-300 dark:bg-indigo-800 dark:text-indigo-100 dark:hover:bg-indigo-700 p-4 transition-all"
 								>
 									<span class="flex justify-between align-middle items-center">
 										<p class="font-bold text-md">{result.Candidate}</p>
@@ -197,8 +197,8 @@
 					</div>
 					<!-- Display candidates -->
 					<div class="overflow-x-auto shadow-lg rounded-lg mt-6">
-						<table class="min-w-full bg-white dark:bg-slate-800 rounded-lg">
-							<thead class="bg-yellow-400 dark:bg-slate-700 sticky top-0">
+						<table class="min-w-full bg-white dark:bg-indigo-800 rounded-lg">
+							<thead class="bg-yellow-400 dark:bg-indigo-700 sticky top-0">
 								<tr>
 									<th
 										class="px-6 py-3 text-left text-sm font-semibold text-gray-700 dark:text-gray-100"
@@ -244,7 +244,7 @@
 							<tbody>
 								{#each selectedConstituency.Candidates as candidate, index}
 									<tr
-										class="hover:bg-yellow-100 dark:hover:bg-slate-600 text-gray-800 dark:text-gray-100"
+										class="hover:bg-yellow-100 dark:hover:bg-indigo-600 text-gray-800 dark:text-gray-100"
 									>
 										<td class="px-6 py-4 text-sm">{index + 1}</td>
 

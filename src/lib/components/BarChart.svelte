@@ -145,7 +145,7 @@
 </script>
 
 <!-- Chart and slider -->
-<div class="chart-container p-4 bg-yellow-200 text-yellow-950 dark:bg-slate-900 dark:text-white;">
+<div class="chart-container p-4 bg-yellow-200 text-yellow-950 dark:bg-indigo-900 dark:text-white;">
 	<canvas bind:this={chartElement}></canvas>
 
 	<!-- Range slider showing the X-axis (years) values -->

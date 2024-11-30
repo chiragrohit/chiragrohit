@@ -40,19 +40,58 @@
 		</div>
 
 		<!-- ################################################# CARD Component -->
-		<p class="text-xl">CARD</p>
-		<div class="flex flex-wrap justify-between">
+		<div class="grid grid-cols-2 gap-4">
 			<div class="card">
-				<div class="card-body">
-					<h1>Card Title</h1>
+				<div class="gen-ai-card card-body">
+					<span>Gen AI</span>
+					<h1>Gen AI Title</h1>
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, a, corporis
 						consequuntur voluptate quaerat quod natus animi sit dolore architecto, magni veniam
 						aperiam aut! Ad nisi eveniet debitis adipisci deserunt.
 					</p>
-					<button>Buy Now</button>
+					<button class="gen-ai-btn btn">Buy Now</button>
 				</div>
 			</div>
-		</div></diV
-	>
+
+			<div class="card">
+				<div class="data-science-card card-body">
+					<span>Data Science</span>
+					<h1>Data Science Card</h1>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, a, corporis
+						consequuntur voluptate quaerat quod natus animi sit dolore architecto, magni veniam
+						aperiam aut! Ad nisi eveniet debitis adipisci deserunt.
+					</p>
+					<button class="data-science-btn btn">Buy Now</button>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="web-dev-card card-body">
+					<span>Web Development</span>
+					<h1>Web Dev Card</h1>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, a, corporis
+						consequuntur voluptate quaerat quod natus animi sit dolore architecto, magni veniam
+						aperiam aut! Ad nisi eveniet debitis adipisci deserunt.
+					</p>
+					<button class="web-dev-btn btn">Buy Now</button>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="default-card card-body">
+					<span>Default</span>
+					<h1>Default Card</h1>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, a, corporis
+						consequuntur voluptate quaerat quod natus animi sit dolore architecto, magni veniam
+						aperiam aut! Ad nisi eveniet debitis adipisci deserunt.
+					</p>
+					<button class="default-btn btn">Buy Now</button>
+				</div>
+			</div>
+		</div>
+	</diV>
 </div>
