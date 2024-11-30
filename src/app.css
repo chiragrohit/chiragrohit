@@ -93,7 +93,7 @@
     }
 
     .card .card-body span {
-        @apply text-xs font-medium px-2 py-1 text-end;
+        @apply text-xs font-medium px-2 py-1 text-end border-b;
     }
 
     /* Gen AI Card */
