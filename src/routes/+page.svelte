@@ -58,16 +58,15 @@
 
 <div class="container mx-auto px-4 py-8 dark:text-white">
 	<!-- Hero Section -->
-	<section class="min-h-[70vh] flex flex-col justify-center text-center mb-16">
-		<h1
-			class="text-6xl md:text-8xl font-bold mb-9 bg-gradient-to-r from-red-600 via-yellow-500 to-purple-400 inline-block text-transparent bg-clip-text"
-		>
-			Chirag Rohit
-		</h1>
+	<section
+		class="min-h-[70vh] flex flex-col justify-center text-center mb-16 rounded-t-full bg-gradient-to-b from-yellow-200 to-yellow-400 dark:from-indigo-700 dark:to-indigo-950"
+	>
+		<h1 class="text-6xl md:text-8xl font-bold mb-9 text-black dark:text-white">Chirag Rohit</h1>
+
 		<div class="space-y-2">
-			<p class="text-4xl md:text-6xl">Web Dev</p>
-			<p class="text-4xl md:text-6xl">Data Science</p>
-			<p class="text-4xl md:text-6xl">Gen AI</p>
+			<p class="text-4xl md:text-6xl font-semibold">Web Dev</p>
+			<p class="text-4xl md:text-6xl font-semibold">Data Science</p>
+			<p class="text-4xl md:text-6xl font-semibold">Gen AI</p>
 		</div>
 	</section>
 
