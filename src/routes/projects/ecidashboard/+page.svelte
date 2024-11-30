@@ -7,10 +7,10 @@
 	<!-- Card for Economic Data -->
 	<div class="flex flex-wrap justify-between">
 		<div class="card">
-			<div class="card-body">
+			<div class="card-body data-science-card">
 				<h1>Maharashtra Assembly 2024 Results</h1>
 
-				<a href="/projects/ecidashboard/maha2024AS">View</a>
+				<a class="btn data-science-btn" href="/projects/ecidashboard/maha2024AS">View</a>
 			</div>
 		</div>
 	</div>

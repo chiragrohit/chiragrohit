@@ -50,7 +50,7 @@
 											: 'default-btn'
 							}`}
 						>
-							View Project
+							{status}
 						</a>
 					</div>
 				</div>

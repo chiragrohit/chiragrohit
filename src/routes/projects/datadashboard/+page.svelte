@@ -3,10 +3,10 @@
 	<!-- Card for Economic Data -->
 	<div class="flex flex-wrap justify-between">
 		<div class="card">
-			<div class="card-body">
+			<div class="card-body data-science-card">
 				<h1>Economic Data</h1>
 				<p>Economic data</p>
-				<a href="/projects/datadashboard/economydata">View</a>
+				<a class="btn data-science-btn" href="/projects/datadashboard/economydata">View</a>
 			</div>
 		</div>
 	</div>
