@@ -53,10 +53,11 @@
     }
 
     .btn-primary {
-        @apply text-black hover:text-white dark:text-indigo-100 bg-yellow-300
-            hover:bg-yellow-900 dark:bg-indigo-800 border-2 border-yellow-900
-            dark:border-indigo-400 px-6 py-2 shadow-md dark:hover:text-black
-            dark:hover:bg-indigo-400 transition-all duration-300 ease-in-out;
+        @apply py-2 px-4 rounded-md text-center text-black hover:text-white
+            dark:text-indigo-100 bg-yellow-300 hover:bg-yellow-900
+            dark:bg-indigo-800 border-2 border-yellow-900 dark:border-indigo-400
+            shadow-md dark:hover:text-black dark:hover:bg-indigo-400
+            transition-all duration-300 ease-in-out;
     }
 
     /* INPUT */
