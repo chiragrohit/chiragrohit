@@ -49,7 +49,7 @@
 @layer components {
     body {
         font-family: "Trebuchet MS", sans-serif;
-        @apply bg-yellow-400 dark:bg-indigo-950 dark:text-white;
+        @apply bg-yellow-100 dark:bg-indigo-950 dark:text-white;
     }
 
     .btn-primary {
