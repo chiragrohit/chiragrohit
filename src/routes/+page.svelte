@@ -46,7 +46,7 @@
 		},
 		{
 			name: 'Tailwind CSS',
-			logo: 'https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg',
+			logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg',
 			bgClass: 'bg-yellow-300 dark:bg-indigo-800 hover:bg-yellow-400 dark:hover:bg-indigo-700'
 		}
 	];
