@@ -4,7 +4,6 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 	import { fade } from 'svelte/transition';
 	import * as config from '$lib/config';
-	import RandomShapes from '$lib/components/RandomShapes.svelte';
 
 	/** @type {{data: any, children?: import('svelte').Snippet}} */
 	let { data, children } = $props();
@@ -20,8 +19,7 @@
 	Portfolio under construction!
 </p>
 
-<RandomShapes />
-
+\
 <Navbar navbarItems={data.navbarItems} />
 {#key data.url}
 	<div class="overflow-auto p-4 mt-16" in:fade>
